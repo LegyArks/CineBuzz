@@ -26,8 +26,6 @@ public class Showtime {
 		
 	}
 
-	
-
 	public Showtime(Long showId, LocalDate showDate, LocalTime showTime, int availableSeats) {
 		super();
 		this.showId = showId;
