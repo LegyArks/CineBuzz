@@ -11,7 +11,7 @@ import com.capgemini.CineBuzz.services.RegisterService;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("/api/users")
+@RequestMapping("/api/register")
 public class RegisterController {
 	RegisterService registerService;
 
