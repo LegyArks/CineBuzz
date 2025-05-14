@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.capgemini.CineBuzz.entities.Movie;
+import com.capgemini.CineBuzz.exceptions.MovieNotFoundException;
 import com.capgemini.CineBuzz.repositories.MovieRepository;
 
 import java.util.List;
