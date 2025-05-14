@@ -2,8 +2,6 @@ package com.capgemini.CineBuzz.entities;
 
 import java.util.List;
 
-import com.capgemini.events.Entity.Registration;
-
 import jakarta.persistence.Entity;
 
 import jakarta.persistence.GeneratedValue;
@@ -54,7 +52,6 @@ public class User {
     }
 
     public User(Long userId, String name, String email, String password, String phoneNumber,String userType) {
-        super();
         this.userId = userId;
         this.name = name;
         this.email = email;

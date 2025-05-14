@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.*;
 
 import com.capgemini.CineBuzz.entities.User;
 import com.capgemini.CineBuzz.services.UserService;
-import com.capgemini.MovieWeb.dto.UserRegistrationDTO;
 
 import jakarta.validation.Valid;
 
@@ -93,7 +92,7 @@ public class UserController {
 	}
 
 	@PostMapping("/register")
-	public ResponseEntity<?> registerUser(@Valid @RequestBody UserRegistrationDTO userDTO) {
+	public ResponseEntity<?> registerUser(@Valid @RequestBody User userDTO) {
 		// Check if email already exists
 		if (userService.emailExists(userDTO.getEmail())) {
 			return ResponseEntity.status(HttpStatus.CONFLICT).body("Email already in use");
@@ -107,7 +106,7 @@ public class UserController {
 		user.setPhoneNumber(userDTO.getPhoneNumber());
 
 		User savedUser = userService.createUser(user);
-		return ResponseEntity.status(HttpStatus.CREATED).location(URI.create("/api/users/" + savedUser.getId()))
+		return ResponseEntity.status(HttpStatus.CREATED).location(URI.create("/api/users/" + savedUser.getUserId()))
 				.body(savedUser);
 	}
 

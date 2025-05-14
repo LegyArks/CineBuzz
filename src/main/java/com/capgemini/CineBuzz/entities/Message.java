@@ -3,8 +3,6 @@ package com.capgemini.CineBuzz.entities;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
-import org.apache.catalina.User;
-
 @Entity
 public class Message {
     @Id
@@ -87,6 +85,6 @@ public class Message {
 
     @Override
     public String toString() {
-        return "Message [messageId=" + messageId + ", name=" + name + ", user=" + (user != null ? user.getId() : null) + ", message=" + message + ", timestamp=" + timestamp + "]";
+        return "Message [messageId=" + messageId + ", name=" + name + ", user=" + (user != null ? user.getUserId() : null) + ", message=" + message + ", timestamp=" + timestamp + "]";
     }
 }

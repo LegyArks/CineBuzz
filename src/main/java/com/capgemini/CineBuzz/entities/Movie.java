@@ -26,7 +26,7 @@ public class Movie {
     private String trailer; 
     
     @OneToMany(mappedBy = "movie")
-    private List<showTime> showTime;
+    private List<Showtime> showTime;
 
     public Movie() {}
 
