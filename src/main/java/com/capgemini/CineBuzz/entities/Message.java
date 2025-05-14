@@ -90,4 +90,6 @@ public class Message {
     public String toString() {
         return "Message [messageId=" + messageId + ", name=" + name + ", user=" + (user != null ? user.getUserId() : null) + ", message=" + message + ", timestamp=" + timestamp + "]";
     }
+    
+    //To check this
 }
