@@ -7,9 +7,13 @@ import org.springframework.web.bind.annotation.*;
 
 import com.capgemini.CineBuzz.entities.User;
 import com.capgemini.CineBuzz.services.UserService;
+import com.capgemini.MovieWeb.dto.UserRegistrationDTO;
+
+import jakarta.validation.Valid;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Map;
 
 
 @RestController
@@ -17,7 +21,7 @@ import java.util.List;
 @CrossOrigin(origins = "*")
 public class UserController {
 	private final UserService userService;
-
+	
 	@Autowired
 	public UserController(UserService userService) {
 		this.userService = userService;
@@ -67,6 +71,44 @@ public class UserController {
 		} else {
 			return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 		}
+	}
+	
+	@GetMapping("/email/{email}")
+	public ResponseEntity<User> getUserByEmail(@PathVariable String email) {
+		User user = userService.findByEmail(email);
+		return ResponseEntity.ok(user);
+	}
+	
+	@PostMapping("/login")
+	public ResponseEntity<?> loginUser(@RequestBody Map<String, String> credentials) {
+		String email = credentials.get("email");
+		String password = credentials.get("password");
+
+		try {
+			User user = userService.authenticateUser(email, password);
+			return ResponseEntity.ok(user);
+		} catch (RuntimeException e) {
+			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
+		}
+	}
+
+	@PostMapping("/register")
+	public ResponseEntity<?> registerUser(@Valid @RequestBody UserRegistrationDTO userDTO) {
+		// Check if email already exists
+		if (userService.emailExists(userDTO.getEmail())) {
+			return ResponseEntity.status(HttpStatus.CONFLICT).body("Email already in use");
+		}
+
+		// Convert DTO to Entity
+		User user = new User();
+		user.setName(userDTO.getName());
+		user.setEmail(userDTO.getEmail());
+		user.setPassword(userDTO.getPassword());
+		user.setPhoneNumber(userDTO.getPhoneNumber());
+
+		User savedUser = userService.createUser(user);
+		return ResponseEntity.status(HttpStatus.CREATED).location(URI.create("/api/users/" + savedUser.getId()))
+				.body(savedUser);
 	}
 
 	

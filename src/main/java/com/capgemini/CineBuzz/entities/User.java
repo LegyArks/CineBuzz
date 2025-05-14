@@ -1,10 +1,15 @@
 package com.capgemini.CineBuzz.entities;
 
+import java.util.List;
+
+import com.capgemini.events.Entity.Registration;
+
 import jakarta.persistence.Entity;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -40,6 +45,10 @@ public class User {
     @Pattern(regexp = "^[789]\\d{9}$", 
              message = "Phone number must be 10 digits starting with 7, 8, or 9")
     private String phoneNumber;
+    
+    @OneToMany(mappedBy = "user")
+    private List<Booking> booking;
+
     
     public User() {
     }
