@@ -3,7 +3,6 @@ package com.capgemini.CineBuzz.controllers;
 import com.capgemini.CineBuzz.entities.Message;
 import com.capgemini.CineBuzz.services.MessageService;
 
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
