@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.capgemini.CineBuzz.entities.User;
-import com.capgemini.CineBuzz.exception.UserNotFoundException;
+import com.capgemini.CineBuzz.exceptions.UserNotFoundException;
 import com.capgemini.CineBuzz.repositories.UserRepository;
 
 import java.util.List;
@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService {
         existingUser.setName(updatedUser.getName());
         existingUser.setEmail(updatedUser.getEmail());
         existingUser.setPassword(updatedUser.getPassword());
-        existingUser.setPhoneNumber(updatedUser.getPhoneNumber());
+        existingUser.setPhoneNumber(updatedUser.getphoneNumber());
         return userRepository.save(existingUser);
     }
 
@@ -62,8 +62,8 @@ public class UserServiceImpl implements UserService {
         if (patch.getPassword() != null) {
             existingUser.setPassword(patch.getPassword());
         }
-        if (patch.getPhoneNo() != null) {
-            existingUser.setPhoneNo(patch.getPhoneNo());
+        if (patch.getphoneNumber() != null) {
+            existingUser.setPhoneNumber(patch.getphoneNumber());
         }
 
         return userRepository.save(existingUser);
