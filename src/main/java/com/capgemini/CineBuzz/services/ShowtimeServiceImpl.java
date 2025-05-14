@@ -6,16 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.capgemini.CineBuzz.entities.Showtime;
+import com.capgemini.CineBuzz.exceptions.ShowtimeNotFoundException;
 import com.capgemini.CineBuzz.repositories.ShowtimeRepository;
 
-
-
 @Service
-public class ShowtimeServiceIMPL implements ShowtimeService {
+public class ShowtimeServiceImpl implements ShowtimeService {
+
     private final ShowtimeRepository showtimeRepository;
 
     @Autowired
-    public ShowtimeServiceIMPL(ShowtimeRepository showtimeRepository) {
+    public ShowtimeServiceImpl(ShowtimeRepository showtimeRepository) {
         this.showtimeRepository = showtimeRepository;
     }
 
@@ -39,10 +39,12 @@ public class ShowtimeServiceIMPL implements ShowtimeService {
     public Showtime updateShowtime(Long showId, Showtime updatedShowtime) {
         Showtime existingShowtime = showtimeRepository.findById(showId)
                 .orElseThrow(() -> new ShowtimeNotFoundException("Showtime not found with showId " + showId));
-        existingShowtime.setMovieId(updatedShowtime.getMovieId());
+
+        existingShowtime.setMovie(updatedShowtime.getMovie());
         existingShowtime.setShowDate(updatedShowtime.getShowDate());
         existingShowtime.setShowTime(updatedShowtime.getShowTime());
         existingShowtime.setAvailableSeats(updatedShowtime.getAvailableSeats());
+
         return showtimeRepository.save(existingShowtime);
     }
 
@@ -51,8 +53,8 @@ public class ShowtimeServiceIMPL implements ShowtimeService {
         Showtime existingShowtime = showtimeRepository.findById(showId)
                 .orElseThrow(() -> new ShowtimeNotFoundException("Showtime not found with showId: " + showId));
 
-        if (patch.getMovieId() != null) {
-            existingShowtime.setMovieId(patch.getMovieId());
+        if (patch.getMovie() != null) {
+            existingShowtime.setMovie(patch.getMovie());
         }
         if (patch.getShowDate() != null) {
             existingShowtime.setShowDate(patch.getShowDate());
