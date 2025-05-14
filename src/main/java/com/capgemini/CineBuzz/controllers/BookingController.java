@@ -70,10 +70,11 @@ public class BookingController {
         }
     }
 
-//    @GetMapping("/user/{username}")
-//    public ResponseEntity<List<Booking>> getBookingsByName(@PathVariable String name) {
-//        List<Booking> bookings = bookingService.findByName(name);
-//        return ResponseEntity.status(HttpStatus.OK).body(bookings);
-//    }
+
+    @GetMapping("/user/{username}")
+    public ResponseEntity<List<Booking>> getBookingsByName(@PathVariable String name) {
+        List<Booking> bookings = bookingService.findBookingsByUserName(name);
+        return ResponseEntity.ok(bookings);
+    }
 }
 

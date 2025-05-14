@@ -8,5 +8,7 @@ import com.capgemini.CineBuzz.entities.Booking;
 
 
 public interface BookingRepository extends JpaRepository<Booking, Long> {
-//    List<Booking> findByName(String name);
+
+	List<Booking> findByUser_Name(String name);
+
 }

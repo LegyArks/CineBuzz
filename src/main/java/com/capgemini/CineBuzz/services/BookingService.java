@@ -12,5 +12,6 @@ public interface BookingService {
     Booking updateBooking(Long id, Booking booking);
     Booking patchBooking(Long id, Booking booking);
     boolean deleteBooking(Long id);
-//    List<Booking> findByName(String name);
+
+    List<Booking> findBookingsByUserName(String name);
 }
