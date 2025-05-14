@@ -17,4 +17,10 @@ public interface UserService {
 	User updateUser(Long userId, User user);
 
 	boolean deleteUser(Long userId);
+	
+	User findByEmail(String email);
+
+    boolean emailExists(String email);
+    
+    User authenticateUser(String email, String password);
 }

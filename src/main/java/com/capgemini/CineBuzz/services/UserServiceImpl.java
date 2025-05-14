@@ -77,6 +77,33 @@ public class UserServiceImpl implements UserService {
         userRepository.deleteById(id);
         return true;
     }
+    
+    @Override
+    public User authenticateUser(String email, String password) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new UserNotFoundException("User not found with email: " + email));
+        
+        if (!user.getPassword().equals(password)) {
+            throw new RuntimeException("Invalid password");
+        }
+        
+        return user;
+    }
+    
+    
+    // NEW METHOD IMPLEMENTATION ADDED
+    @Override
+    public boolean emailExists(String email) {
+        return userRepository.findByEmail(email).isPresent();
+    }
+
+
+
+    @Override
+    public User findByEmail(String email) {
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new UserNotFoundException("User not found with email: " + email));
+    }
 
    
 }
