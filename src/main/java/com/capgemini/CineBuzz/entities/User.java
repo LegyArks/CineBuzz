@@ -2,7 +2,8 @@ package com.capgemini.CineBuzz.entities;
 
 import java.util.List;
 
-import com.capgemini.events.Entity.Registration;
+
+
 
 import jakarta.persistence.Entity;
 
@@ -16,6 +17,7 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 ;
+
 
 @Entity
 public class User {
@@ -44,7 +46,7 @@ public class User {
     @NotNull(message = "Phone number is required")
     @Pattern(regexp = "^[789]\\d{9}$", 
              message = "Phone number must be 10 digits starting with 7, 8, or 9")
-    private String phoneNumber;
+    private String phoneNo;
     
     @OneToMany(mappedBy = "user")
     private List<Booking> booking;
@@ -53,13 +55,13 @@ public class User {
     public User() {
     }
 
-    public User(Long userId, String name, String email, String password, String phoneNumber,String userType) {
+    public User(Long userId, String name, String email, String password, String phoneNo,String userType) {
         super();
         this.userId = userId;
         this.name = name;
         this.email = email;
         this.password = password;
-        this.phoneNumber = phoneNumber;
+        this.phoneNo = phoneNo;
         this.userType = userType;
     }
 
@@ -105,18 +107,18 @@ public class User {
 		this.userType = userType;
 	}
 
-	public String getPhoneNumber() {
-		return phoneNumber;
+	public String getPhoneNo() {
+		return phoneNo;
 	}
 
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
+	public void setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
 	}
 
 	@Override
 	public String toString() {
 		return "User [userId=" + userId + ", name=" + name + ", email=" + email + ", password=" + password
-				+ ", userType=" + userType + ", phoneNumber=" + phoneNumber + "]";
+				+ ", userType=" + userType + ", phoneNo=" + phoneNo + "]";
 	}
 
     

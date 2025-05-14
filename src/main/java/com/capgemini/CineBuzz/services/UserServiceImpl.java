@@ -62,8 +62,8 @@ public class UserServiceImpl implements UserService {
         if (patch.getPassword() != null) {
             existingUser.setPassword(patch.getPassword());
         }
-        if (patch.getPhoneNumber() != null) {
-            existingUser.setPhoneNumber(patch.getPhoneNumber());
+        if (patch.getPhoneNo() != null) {
+            existingUser.setPhoneNo(patch.getPhoneNo());
         }
 
         return userRepository.save(existingUser);
