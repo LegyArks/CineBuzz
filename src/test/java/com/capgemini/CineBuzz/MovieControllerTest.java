@@ -1,0 +1,107 @@
+package com.capgemini.CineBuzz;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+import static org.springframework.http.HttpStatus.*;
+
+import com.capgemini.CineBuzz.controllers.MovieController;
+import com.capgemini.CineBuzz.entities.Movie;
+import com.capgemini.CineBuzz.services.MovieService;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+
+import org.springframework.http.ResponseEntity;
+
+import java.util.Arrays;
+import java.util.List;
+
+class MovieControllerTest {
+
+    @Mock
+    private MovieService movieService;
+
+    @InjectMocks
+    private MovieController movieController;
+
+    private Movie sampleMovie;
+
+    @BeforeEach
+    void setUp() {
+        MockitoAnnotations.openMocks(this);
+        sampleMovie = new Movie(1L, "Inception", "Sci-Fi", 148, "English", 200.0, false, "image.jpg", "Dream invasion", "trailer.mp4");
+    }
+
+    @Test
+    void testGetAllMovies() {
+        when(movieService.getAllMovies()).thenReturn(Arrays.asList(sampleMovie));
+
+        ResponseEntity<List<Movie>> response = movieController.getAllMovies();
+
+        assertEquals(200, response.getStatusCode().value());
+        assertEquals(1, response.getBody().size());
+        assertEquals("Inception", response.getBody().get(0).getTitle());
+    }
+
+    @Test
+    void testGetMovieById() {
+        when(movieService.getMovieById(1L)).thenReturn(sampleMovie);
+
+        ResponseEntity<Movie> response = movieController.getMovie(1L);
+
+        assertEquals(200, response.getStatusCode().value());
+        assertEquals("Inception", response.getBody().getTitle());
+    }
+
+    @Test
+    void testCreateMovie() {
+        when(movieService.createMovie(sampleMovie)).thenReturn(sampleMovie);
+
+        ResponseEntity<Movie> response = movieController.createMovie(sampleMovie);
+
+        assertEquals(201, response.getStatusCode().value());
+        assertEquals("Inception", response.getBody().getTitle());
+        assertTrue(response.getHeaders().getLocation().toString().contains("/api/movies/1"));
+    }
+
+    @Test
+    void testUpdateMovie() {
+        when(movieService.updateMovie(eq(1L), any(Movie.class))).thenReturn(sampleMovie);
+
+        ResponseEntity<Movie> response = movieController.updateMovie(1L, sampleMovie);
+
+        assertEquals(200, response.getStatusCode().value());
+        assertEquals("Inception", response.getBody().getTitle());
+    }
+
+    @Test
+    void testPatchMovie() {
+        when(movieService.patchMovie(eq(1L), any(Movie.class))).thenReturn(sampleMovie);
+
+        ResponseEntity<Movie> response = movieController.patchMovie(1L, sampleMovie);
+
+        assertEquals(200, response.getStatusCode().value());
+        assertEquals("Inception", response.getBody().getTitle());
+    }
+
+    @Test
+    void testDeleteMovie_Success() {
+        when(movieService.deleteMovie(1L)).thenReturn(true);
+
+        ResponseEntity<Void> response = movieController.deleteMovie(1L);
+
+        assertEquals(204, response.getStatusCode().value());
+    }
+
+    @Test
+    void testDeleteMovie_NotFound() {
+        when(movieService.deleteMovie(2L)).thenReturn(false);
+
+        ResponseEntity<Void> response = movieController.deleteMovie(2L);
+
+        assertEquals(404, response.getStatusCode().value());
+    }
+}
