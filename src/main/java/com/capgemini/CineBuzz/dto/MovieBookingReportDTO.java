@@ -4,7 +4,6 @@ public class MovieBookingReportDTO {
     private String movieName;
     private int totalSeats;
 
-    // constructor, getters, setters
     public MovieBookingReportDTO(String movieName, int totalSeats) {
         this.movieName = movieName;
         this.totalSeats = totalSeats;

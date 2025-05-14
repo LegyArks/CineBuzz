@@ -7,7 +7,6 @@ public class DateRevenueReportDTO {
     private double totalRevenue;
     private int totalTickets;
 
-    // constructor, getters, setters
     public DateRevenueReportDTO(LocalDate date, double totalRevenue, int totalTickets) {
         this.date = date;
         this.totalRevenue = totalRevenue;
