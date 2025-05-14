@@ -1,4 +1,4 @@
-package com.capgemini.CineBuzz.exception;
+package com.capgemini.CineBuzz.exceptions;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;

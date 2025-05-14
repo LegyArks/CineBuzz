@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.capgemini.CineBuzz.entities.User;
-import com.capgemini.CineBuzz.exception.UserNotFoundException;
+import com.capgemini.CineBuzz.exceptions.UserNotFoundException;
 import com.capgemini.CineBuzz.repositories.UserRepository;
 
 import java.util.List;
