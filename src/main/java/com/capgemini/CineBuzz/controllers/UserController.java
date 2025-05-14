@@ -103,7 +103,7 @@ public class UserController {
 		user.setName(userDTO.getName());
 		user.setEmail(userDTO.getEmail());
 		user.setPassword(userDTO.getPassword());
-		user.setPhoneNumber(userDTO.getPhoneNumber());
+		user.setPhoneNumber(userDTO.getphoneNumber());
 
 		User savedUser = userService.createUser(user);
 		return ResponseEntity.status(HttpStatus.CREATED).location(URI.create("/api/users/" + savedUser.getUserId()))

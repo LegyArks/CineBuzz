@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
-;
+
 
 @Entity
 @Table(name = "user")
@@ -55,6 +55,9 @@ public class User {
     
     public User() {
     }
+
+
+  
 
     public User(Long userId, String name, String email, String password, String phoneNumber,String userType) {
         this.userId = userId;
@@ -107,7 +110,7 @@ public class User {
 		this.userType = userType;
 	}
 
-	public String getPhoneNumber() {
+	public String getphoneNumber() {
 		return phoneNumber;
 	}
 

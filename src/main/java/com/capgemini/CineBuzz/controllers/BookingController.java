@@ -70,6 +70,7 @@ public class BookingController {
         }
     }
 
+
     @GetMapping("/user/{username}")
     public ResponseEntity<List<Booking>> getBookingsByName(@PathVariable String name) {
         List<Booking> bookings = bookingService.findBookingsByUserName(name);

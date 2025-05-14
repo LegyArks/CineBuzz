@@ -78,6 +78,5 @@ public class BookingServiceImpli implements BookingService{
 	    public List<Booking> findBookingsByUserName(String name) {
 	        return bookingRepository.findByUser_Name(name);
 	    }
-
 }
 

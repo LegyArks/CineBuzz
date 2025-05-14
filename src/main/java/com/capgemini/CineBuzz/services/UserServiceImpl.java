@@ -44,7 +44,7 @@ public class UserServiceImpl implements UserService {
         existingUser.setName(updatedUser.getName());
         existingUser.setEmail(updatedUser.getEmail());
         existingUser.setPassword(updatedUser.getPassword());
-        existingUser.setPhoneNumber(updatedUser.getPhoneNumber());
+        existingUser.setPhoneNumber(updatedUser.getphoneNumber());
         return userRepository.save(existingUser);
     }
 
@@ -62,8 +62,8 @@ public class UserServiceImpl implements UserService {
         if (patch.getPassword() != null) {
             existingUser.setPassword(patch.getPassword());
         }
-        if (patch.getPhoneNumber() != null) {
-            existingUser.setPhoneNumber(patch.getPhoneNumber());
+        if (patch.getphoneNumber() != null) {
+            existingUser.setPhoneNumber(patch.getphoneNumber());
         }
 
         return userRepository.save(existingUser);
