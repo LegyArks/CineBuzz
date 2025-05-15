@@ -11,7 +11,10 @@ import com.capgemini.CineBuzz.entities.User;
 import com.capgemini.CineBuzz.exceptions.InvalidCredentialsException;
 import com.capgemini.CineBuzz.repositories.UserRepository;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Service
+@Slf4j
 public class LoginDtoServiceImpl implements LoginDtoService{
 
 	
@@ -26,6 +29,7 @@ public class LoginDtoServiceImpl implements LoginDtoService{
 	
 	
 	public User authenticateUser(LoginDto loginDto) throws InvalidCredentialsException {
+        log.info("Authenticating user with email:", loginDto.getEmail());
 	    Optional<User> userOptional = userRepository.findByEmailAndPassword(
 	        loginDto.getEmail(), 
 	        loginDto.getPassword()
@@ -37,9 +41,11 @@ public class LoginDtoServiceImpl implements LoginDtoService{
 
 	    // Ensure userType is not null
 	    if (user.getUserType() == null) {
+            log.error("User type is not set for user: {}", loginDto.getEmail());
 	        throw new InvalidCredentialsException("User type not set");
 	    }
-
+	    
+        log.info("User authenticated successfully with email:", loginDto.getEmail());
 	    return user;
 	}
 
