@@ -37,7 +37,7 @@ public class User {
     private String email;
     
     @NotBlank(message = "Password is required")
-    @Pattern(regexp = "^[a-zA-Z0-9]{6,}$", 
+    @Pattern(regexp = "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{6,}$", 
              message = "Password must be at least 6 alphanumeric characters")
     private String password;
     
