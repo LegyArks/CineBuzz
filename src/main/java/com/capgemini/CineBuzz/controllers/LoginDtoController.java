@@ -1,7 +1,5 @@
 package com.capgemini.CineBuzz.controllers;
 
-import org.springframework.http.HttpStatus;
-
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,9 +13,10 @@ import com.capgemini.CineBuzz.exceptions.InvalidCredentialsException;
 import com.capgemini.CineBuzz.services.LoginDtoService;
 
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 
-@CrossOrigin(origins = "*")
 @RestController
+@Slf4j
 @RequestMapping("/api/auth")
 public class LoginDtoController {
 
@@ -29,8 +28,10 @@ public class LoginDtoController {
 
     @PostMapping("/login")
     public ResponseEntity<User> handleLogin(@Valid @RequestBody LoginDto loginDto) 
-        throws InvalidCredentialsException {
+            throws InvalidCredentialsException {
+        log.info("Login attempt for email: {}", loginDto.getEmail());
         User user = loginDtoService.authenticateUser(loginDto);
+        log.info("Login successful for user ID: {} and type: {}", user.getUserId(), user.getUserType());
         return ResponseEntity.ok()
             .header("User-Type", user.getUserType()) 
             .body(user);

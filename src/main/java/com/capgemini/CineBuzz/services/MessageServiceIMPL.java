@@ -23,34 +23,34 @@ public class MessageServiceIMPL implements MessageService {
 
     @Override
     public Message createMessage(Message message) {
-    	log.info("Creating Message : " , message);
-    	return messageRepository.save(message);
+        log.info("Creating Message: {}", message);
+        return messageRepository.save(message);
     }
 
     @Override
     public List<Message> getAllMessages() {
-    	log.info("fetching all messages");
+        log.info("Fetching all messages");
         return messageRepository.findAll();
     }
 
     @Override
     public Message getMessageById(Long id) {
-    	log.info("Fetching message by Id");
+        log.info("Fetching message by Id: {}", id);
         return messageRepository.findById(id)
-                .orElseThrow(() ->{ 
-                    log.warn("Message not found with ID:", id);
-                	return new MessageNotFoundException("Message not found with id: " + id);
+                .orElseThrow(() -> {
+                    log.warn("Message not found with ID: {}", id);
+                    return new MessageNotFoundException("Message not found with id: " + id);
                 });
     }
 
     @Override
     public void deleteMessage(Long id) {
-        log.info("Delete message with ID:", id);
+        log.info("Delete message with ID: {}", id);
         if (!messageRepository.existsById(id)) {
-            log.warn("Message not found with ID:", id);
+            log.warn("Message not found with ID: {}", id);
             throw new MessageNotFoundException("Message not found with id: " + id);
         }
         messageRepository.deleteById(id);
-        log.info("Message deleted with ID:", id);
+        log.info("Message deleted with ID: {}", id);
     }
 }

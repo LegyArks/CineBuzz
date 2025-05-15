@@ -19,8 +19,9 @@ import com.capgemini.CineBuzz.entities.Booking;
 import com.capgemini.CineBuzz.services.BookingService;
 
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 
-
+@Slf4j
 @RestController
 @RequestMapping("/api/bookings")
 public class BookingController {
@@ -33,23 +34,30 @@ public class BookingController {
 
     @GetMapping
     public ResponseEntity<List<Booking>> getAllBookings() {
+        log.info("Fetching all bookings");
         List<Booking> bookings = bookingService.getAllBookings();
+        log.debug("Fetched {} bookings", bookings.size());
         return ResponseEntity.status(HttpStatus.OK).body(bookings);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Booking> getBooking(@PathVariable Long id) {
+        log.info("Fetching booking with ID: {}", id);
         Booking booking = bookingService.getBookingById(id);
         if (booking != null) {
+            log.debug("Found booking: {}", booking);
             return ResponseEntity.status(HttpStatus.OK).body(booking);
         } else {
+            log.warn("Booking not found with ID: {}", id);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
 
     @PostMapping
     public ResponseEntity<Booking> createBooking(@Valid @RequestBody Booking booking) {
+        log.info("Creating new booking: {}", booking);
         Booking savedBooking = bookingService.createBooking(booking);
+        log.debug("Booking created with ID: {}", savedBooking.getBookingId());
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .location(URI.create("/api/bookings/" + savedBooking.getBookingId()))
@@ -57,26 +65,31 @@ public class BookingController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Booking> updateBooking(@PathVariable Long id,@Valid @RequestBody Booking booking) {
+    public ResponseEntity<Booking> updateBooking(@PathVariable Long id, @Valid @RequestBody Booking booking) {
+        log.info("Updating booking with ID: {}", id);
         Booking updatedBooking = bookingService.updateBooking(id, booking);
+        log.debug("Updated booking: {}", updatedBooking);
         return ResponseEntity.status(HttpStatus.OK).body(updatedBooking);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteBooking(@PathVariable Long id) {
+        log.info("Deleting booking with ID: {}", id);
         boolean deleted = bookingService.deleteBooking(id);
         if (deleted) {
+            log.debug("Deleted booking with ID: {}", id);
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         } else {
+            log.warn("Failed to delete booking. Booking not found with ID: {}", id);
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
 
-
     @GetMapping("/user/{username}")
-    public ResponseEntity<List<Booking>> getBookingsByName(@PathVariable String name) {
-        List<Booking> bookings = bookingService.findBookingsByUserName(name);
+    public ResponseEntity<List<Booking>> getBookingsByName(@PathVariable("username") String username) {
+        log.info("Fetching bookings for user: {}", username);
+        List<Booking> bookings = bookingService.findBookingsByUserName(username);
+        log.debug("Found {} bookings for user {}", bookings.size(), username);
         return ResponseEntity.ok(bookings);
     }
 }
-
