@@ -50,9 +50,10 @@ public class UserController {
 				.body(savedUser);
 	}
 
-	@PutMapping("/{id}")
-	public ResponseEntity<User> updateUser(@PathVariable Long id,@Valid @RequestBody User user) {
-		User updatedUser = userService.updateUser(id, user);
+
+	@PutMapping("/{userId}")
+	public ResponseEntity<User> updateUser(@PathVariable Long userId,@Valid @RequestBody User user) {
+		User updatedUser = userService.updateUser(userId, user);
 		return ResponseEntity.status(HttpStatus.OK).body(updatedUser);
 	}
 
@@ -78,37 +79,37 @@ public class UserController {
 		return ResponseEntity.ok(user);
 	}
 	
-	@PostMapping("/login")
-	public ResponseEntity<?> loginUser(@RequestBody Map<String, String> credentials) {
-		String email = credentials.get("email");
-		String password = credentials.get("password");
-
-		try {
-			User user = userService.authenticateUser(email, password);
-			return ResponseEntity.ok(user);
-		} catch (RuntimeException e) {
-			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
-		}
-	}
-
-	@PostMapping("/register")
-	public ResponseEntity<?> registerUser(@Valid @RequestBody User userDTO) {
-		// Check if email already exists
-		if (userService.emailExists(userDTO.getEmail())) {
-			return ResponseEntity.status(HttpStatus.CONFLICT).body("Email already in use");
-		}
-
-		// Convert DTO to Entity
-		User user = new User();
-		user.setName(userDTO.getName());
-		user.setEmail(userDTO.getEmail());
-		user.setPassword(userDTO.getPassword());
-		user.setPhoneNumber(userDTO.getphoneNumber());
-
-		User savedUser = userService.createUser(user);
-		return ResponseEntity.status(HttpStatus.CREATED).location(URI.create("/api/users/" + savedUser.getUserId()))
-				.body(savedUser);
-	}
+//	@PostMapping("/login")
+//	public ResponseEntity<?> loginUser(@RequestBody Map<String, String> credentials) {
+//		String email = credentials.get("email");
+//		String password = credentials.get("password");
+//
+//		try {
+//			User user = userService.authenticateUser(email, password);
+//			return ResponseEntity.ok(user);
+//		} catch (RuntimeException e) {
+//			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
+//		}
+//	}
+//
+//	@PostMapping("/register")
+//	public ResponseEntity<?> registerUser(@Valid @RequestBody User userDTO) {
+//		// Check if email already exists
+//		if (userService.emailExists(userDTO.getEmail())) {
+//			return ResponseEntity.status(HttpStatus.CONFLICT).body("Email already in use");
+//		}
+//
+//		// Convert DTO to Entity
+//		User user = new User();
+//		user.setName(userDTO.getName());
+//		user.setEmail(userDTO.getEmail());
+//		user.setPassword(userDTO.getPassword());
+//		user.setPhoneNumber(userDTO.getphoneNumber());
+//
+//		User savedUser = userService.createUser(user);
+//		return ResponseEntity.status(HttpStatus.CREATED).location(URI.create("/api/users/" + savedUser.getUserId()))
+//				.body(savedUser);
+//	}
 
 	
 
