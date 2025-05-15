@@ -3,6 +3,7 @@ package com.capgemini.CineBuzz.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import com.capgemini.CineBuzz.entities.Showtime;
@@ -47,8 +48,13 @@ public class ShowtimeController {
     }
 
     @PostMapping
-    public ResponseEntity<Showtime> createShowtime(@Valid @RequestBody Showtime showtime) {
-        log.info("Creating new showtime for movie ID: {}", showtime.getMovie().getId());
+
+    public ResponseEntity<Showtime> createShowtime(@Valid @RequestBody Showtime showtime, BindingResult  bindingResult) {
+		log.info("Creating new showtime for movie ID: {}", showtime.getMovie().getId());
+    if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
+
         Showtime savedShowtime = showtimeService.createShowtime(showtime);
         log.info("Showtime created successfully with ID: {}", savedShowtime.getShowId());
         return ResponseEntity
@@ -58,16 +64,25 @@ public class ShowtimeController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Showtime> updateShowtime(@PathVariable("id") Long showId, @Valid @RequestBody Showtime showtime) {
-        log.info("Updating showtime with ID: {}", showId);
+
+    public ResponseEntity<Showtime> updateShowtime(@PathVariable("id") Long showId,@Valid @RequestBody Showtime showtime , BindingResult  bindingResult) {
+		log.info("Updating showtime with ID: {}", showId);
+    if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
+
         Showtime updatedShowtime = showtimeService.updateShowtime(showId, showtime);
         log.info("Showtime updated successfully for ID: {}", showId);
         return ResponseEntity.status(HttpStatus.OK).body(updatedShowtime);
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<Showtime> patchShowtime(@PathVariable("id") Long showId, @Valid @RequestBody Showtime showtime) {
-        log.info("Patching showtime with ID: {}", showId);
+    public ResponseEntity<Showtime> patchShowtime(@PathVariable("id") Long showId,@Valid @RequestBody Showtime showtime, BindingResult  bindingResult) {
+		log.info("Patching showtime with ID: {}", showId);
+    if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
+
         Showtime patched = showtimeService.patchShowtime(showId, showtime);
         log.info("Showtime patched successfully for ID: {}", showId);
         return ResponseEntity.ok(patched);

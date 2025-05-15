@@ -16,6 +16,8 @@ import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
 
+import org.springframework.validation.BindingResult;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
@@ -79,23 +81,31 @@ class BookingControllerTest {
         verify(bookingService, times(1)).getBookingById(2L);
     }
 
-    @Test
     void testCreateBooking() {
+      
+        BindingResult mockBindingResult = mock(BindingResult.class);
+        when(mockBindingResult.hasErrors()).thenReturn(false);
+
         when(bookingService.createBooking(any(Booking.class))).thenReturn(booking);
 
-        ResponseEntity<Booking> response = bookingController.createBooking(booking);
+        ResponseEntity<Booking> response = bookingController.createBooking(booking, mockBindingResult);
 
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
         assertNotNull(response.getBody());
         assertEquals(booking.getBookingId(), response.getBody().getBookingId());
+
         verify(bookingService, times(1)).createBooking(any(Booking.class));
     }
-
+    
     @Test
     void testUpdateBooking() {
+    	
+    	BindingResult mockBindingResult = mock(BindingResult.class);
+        when(mockBindingResult.hasErrors()).thenReturn(false);
+
         when(bookingService.updateBooking(eq(1L), any(Booking.class))).thenReturn(booking);
 
-        ResponseEntity<Booking> response = bookingController.updateBooking(1L, booking);
+        ResponseEntity<Booking> response = bookingController.updateBooking(1L, booking, mockBindingResult);
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());

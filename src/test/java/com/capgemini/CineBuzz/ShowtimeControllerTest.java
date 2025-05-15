@@ -11,6 +11,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -69,12 +70,15 @@ public class ShowtimeControllerTest {
 
     @Test
     void createShowtime_success() {
+    	BindingResult mockBindingResult = mock(BindingResult.class);
+        when(mockBindingResult.hasErrors()).thenReturn(false);
+        
         Showtime input = new Showtime(null, mockMovie, LocalDate.now(), LocalTime.of(14, 0), 100);
         Showtime saved = new Showtime(10L, mockMovie, input.getShowDate(), input.getShowTime(), input.getAvailableSeats());
 
         when(showtimeService.createShowtime(input)).thenReturn(saved);
 
-        ResponseEntity<Showtime> response = showtimeController.createShowtime(input);
+        ResponseEntity<Showtime> response = showtimeController.createShowtime(input,mockBindingResult);
 
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
         assertEquals(10L, response.getBody().getShowId());
@@ -82,11 +86,14 @@ public class ShowtimeControllerTest {
 
     @Test
     void updateShowtime_success() {
+    	BindingResult mockBindingResult = mock(BindingResult.class);
+        when(mockBindingResult.hasErrors()).thenReturn(false);
+        
         Showtime updated = new Showtime(5L, mockMovie, LocalDate.now(), LocalTime.of(16, 0), 120);
 
         when(showtimeService.updateShowtime(eq(5L), any(Showtime.class))).thenReturn(updated);
 
-        ResponseEntity<Showtime> response = showtimeController.updateShowtime(5L, updated);
+        ResponseEntity<Showtime> response = showtimeController.updateShowtime(5L, updated, mockBindingResult);
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertEquals(120, response.getBody().getAvailableSeats());
@@ -94,12 +101,15 @@ public class ShowtimeControllerTest {
 
     @Test
     void patchShowtime_success() {
+    	BindingResult mockBindingResult = mock(BindingResult.class);
+        when(mockBindingResult.hasErrors()).thenReturn(false);
+        
         Showtime patch = new Showtime(null, null, null, null, 50);
         Showtime patched = new Showtime(7L, mockMovie, LocalDate.now(), LocalTime.of(20, 0), 50);
 
         when(showtimeService.patchShowtime(eq(7L), any())).thenReturn(patched);
 
-        ResponseEntity<Showtime> response = showtimeController.patchShowtime(7L, patch);
+        ResponseEntity<Showtime> response = showtimeController.patchShowtime(7L, patch, mockBindingResult);
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertEquals(50, response.getBody().getAvailableSeats());

@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
@@ -26,16 +27,14 @@ public class MessageController {
     }
 
     @PostMapping
-    public ResponseEntity<Message> createMessage(@Valid @RequestBody Message message) {
-//    	Long userId = message.getUser().getId();
-//      User user = userService.getUserById(userId);
-//      message.setUser(user);
+    public ResponseEntity<Message> createMessage(@Valid @RequestBody Message message ,  BindingResult  bindingResult) {
+
         log.info("Creating new message from user");
-
-        Message savedMessage = messageService.createMessage(message);
-
-        log.info("Message created successfully with ID : {} ", savedMessage.getMessageId());
-
+		if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
+    	Message savedMessage = messageService.createMessage(message);
+      log.info("Message created successfully with ID : {} ", savedMessage.getMessageId());
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .location(URI.create("/api/messages/" + savedMessage.getMessageId()))

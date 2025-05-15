@@ -76,8 +76,6 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(createErrorDetails(ex.getMessage(), HttpStatus.BAD_REQUEST.value()), HttpStatus.BAD_REQUEST);
     }
 
-
-
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Object> handleAllExceptions(Exception ex) {
     	System.out.println("Here  hjgjhgjh" );

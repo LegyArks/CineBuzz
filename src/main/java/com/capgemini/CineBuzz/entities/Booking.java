@@ -27,7 +27,6 @@ public class Booking {
 	private User user;
 	@ManyToOne
 	@JoinColumn(name="showId" , referencedColumnName = "showId")
-	@JsonIgnore
 	private Showtime showtime;
 	
 	@Min(value = 1, message = "At least one seat must be booked")

@@ -3,6 +3,7 @@ package com.capgemini.CineBuzz.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import com.capgemini.CineBuzz.entities.Movie;
@@ -47,8 +48,12 @@ public class MovieController {
     }
 
     @PostMapping
-    public ResponseEntity<Movie> createMovie(@Valid @RequestBody Movie movie) {
-        log.info("Creating new movie: {}", movie.getTitle());
+    public ResponseEntity<Movie> createMovie(@Valid @RequestBody Movie movie , BindingResult  bindingResult) {
+		  log.info("Creating new movie: {}", movie.getTitle());
+      if (bindingResult.hasErrors()) {
+			  throw new IllegalArgumentException("Validation has failed");
+		   }
+
         Movie savedMovie = movieService.createMovie(movie);
         log.info("Movie created successfully with ID: {}", savedMovie.getId());
         return ResponseEntity
@@ -58,16 +63,25 @@ public class MovieController {
     }
 
     @PutMapping("/{movieId}")
-    public ResponseEntity<Movie> updateMovie(@PathVariable Long movieId, @Valid @RequestBody Movie movie) {
-        log.info("Updating movie with ID: {}", movieId);
+
+    public ResponseEntity<Movie> updateMovie(@PathVariable Long movieId,@Valid @RequestBody Movie movie ,  BindingResult  bindingResult) {
+		log.info("Updating movie with ID: {}", movieId);
+    if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
         Movie updatedMovie = movieService.updateMovie(movieId, movie);
         log.info("Movie updated successfully: {}", updatedMovie.getTitle());
         return ResponseEntity.status(HttpStatus.OK).body(updatedMovie);
     }
 
     @PatchMapping("/{movieId}")
-    public ResponseEntity<Movie> patchMovie(@PathVariable Long movieId, @Valid @RequestBody Movie movie) {
-        log.info("Patching movie with ID: {}", movieId);
+
+    public ResponseEntity<Movie> patchMovie(@PathVariable Long movieId,@Valid @RequestBody Movie movie, BindingResult  bindingResult) {
+		  log.info("Patching movie with ID: {}", movieId);
+    if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
+
         Movie patchedMovie = movieService.patchMovie(movieId, movie);
         log.info("Movie patched successfully: {}", patchedMovie.getTitle());
         return ResponseEntity.ok(patchedMovie);

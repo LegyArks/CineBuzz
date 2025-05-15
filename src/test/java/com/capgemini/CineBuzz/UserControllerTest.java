@@ -15,6 +15,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 
 import java.util.*;
 
@@ -46,9 +47,13 @@ class UserControllerTest {
 
     @Test
     void testCreateUser() {
+    	
+    	BindingResult mockBindingResult = mock(BindingResult.class);
+        when(mockBindingResult.hasErrors()).thenReturn(false);
+    	
         when(userService.createUser(sampleUser)).thenReturn(sampleUser);
 
-        ResponseEntity<User> response = userController.createUser(sampleUser, null);
+        ResponseEntity<User> response = userController.createUser(sampleUser, mockBindingResult);
 
         assertEquals(CREATED, response.getStatusCode());
         assertEquals("John Doe", response.getBody().getName());
