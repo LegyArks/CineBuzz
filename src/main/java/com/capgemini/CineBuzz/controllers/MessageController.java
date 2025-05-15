@@ -41,13 +41,13 @@ public class MessageController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Message> getMessage(@PathVariable Long messageId) {
+    public ResponseEntity<Message> getMessage(@PathVariable("id") Long messageId) {
         Message message = messageService.getMessageById(messageId);
         return ResponseEntity.status(HttpStatus.OK).body(message);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteMessage(@PathVariable Long messageId) {
+    public ResponseEntity<Void> deleteMessage(@PathVariable("id") Long messageId) {
         messageService.deleteMessage(messageId);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }

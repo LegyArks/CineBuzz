@@ -3,7 +3,7 @@ package com.capgemini.CineBuzz.entities;
 import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+	
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -22,7 +22,6 @@ public class Booking {
 	private User user;
 	@ManyToOne
 	@JoinColumn(name="showId" , referencedColumnName = "showId")
-	@JsonIgnore
 	private Showtime showtime;
 	private int seatsBooked;
 	private LocalDate bookingDate;

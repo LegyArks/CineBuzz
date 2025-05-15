@@ -29,16 +29,16 @@ public class MessageServiceIMPL implements MessageService {
     }
 
     @Override
-    public Message getMessageById(Long id) {
-        return messageRepository.findById(id)
-                .orElseThrow(() -> new MessageNotFoundException("Message not found with id: " + id));
+    public Message getMessageById(Long messageId) {
+        return messageRepository.findById(messageId)
+                .orElseThrow(() -> new MessageNotFoundException("Message not found with id: " + messageId));
     }
 
     @Override
-    public void deleteMessage(Long id) {
-        if (!messageRepository.existsById(id)) {
-            throw new MessageNotFoundException("Message not found with id: " + id);
+    public void deleteMessage(Long messageId) {
+        if (!messageRepository.existsById(messageId)) {
+            throw new MessageNotFoundException("Message not found with id: " + messageId);
         }
-        messageRepository.deleteById(id);
+        messageRepository.deleteById(messageId);
     }
 }
