@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -48,7 +49,10 @@ public class BookingController {
     }
 
     @PostMapping
-    public ResponseEntity<Booking> createBooking(@Valid @RequestBody Booking booking) {
+    public ResponseEntity<Booking> createBooking(@Valid @RequestBody Booking booking , BindingResult  bindingResult) {
+		if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
         Booking savedBooking = bookingService.createBooking(booking);
         return ResponseEntity
                 .status(HttpStatus.CREATED)
@@ -57,7 +61,10 @@ public class BookingController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Booking> updateBooking(@PathVariable Long id,@Valid @RequestBody Booking booking) {
+    public ResponseEntity<Booking> updateBooking(@PathVariable Long id,@Valid @RequestBody Booking booking , BindingResult  bindingResult) {
+		if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
         Booking updatedBooking = bookingService.updateBooking(id, booking);
         return ResponseEntity.status(HttpStatus.OK).body(updatedBooking);
     }
