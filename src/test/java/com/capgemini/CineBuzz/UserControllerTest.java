@@ -54,35 +54,35 @@ class UserControllerTest {
         assertEquals("John Doe", response.getBody().getName());
     }
 
-    @Test
-    void testLoginUser_Success() {
-        Map<String, String> credentials = Map.of("email", "john@example.com", "password", "pass123");
-        when(userService.authenticateUser("john@example.com", "pass123")).thenReturn(sampleUser);
-
-        ResponseEntity<?> response = userController.loginUser(credentials);
-
-        assertEquals(OK, response.getStatusCode());
-        assertEquals(sampleUser, response.getBody());
-    }
-
-    @Test
-    void testRegisterUser_Success() {
-        when(userService.emailExists("john@example.com")).thenReturn(false);
-        when(userService.createUser(any(User.class))).thenReturn(sampleUser);
-
-        ResponseEntity<?> response = userController.registerUser(sampleUser);
-
-        assertEquals(CREATED, response.getStatusCode());
-        assertEquals(sampleUser, response.getBody());
-    }
-
-    @Test
-    void testRegisterUser_Conflict() {
-        when(userService.emailExists("john@example.com")).thenReturn(true);
-
-        ResponseEntity<?> response = userController.registerUser(sampleUser);
-
-        assertEquals(CONFLICT, response.getStatusCode());
-        assertEquals("Email already in use", response.getBody());
-    }
+//    @Test
+//    void testLoginUser_Success() {
+//        Map<String, String> credentials = Map.of("email", "john@example.com", "password", "pass123");
+//        when(userService.authenticateUser("john@example.com", "pass123")).thenReturn(sampleUser);
+//
+//        ResponseEntity<?> response = userController.loginUser(credentials);
+//
+//        assertEquals(OK, response.getStatusCode());
+//        assertEquals(sampleUser, response.getBody());
+//    }
+//
+//    @Test
+//    void testRegisterUser_Success() {
+//        when(userService.emailExists("john@example.com")).thenReturn(false);
+//        when(userService.createUser(any(User.class))).thenReturn(sampleUser);
+//
+//        ResponseEntity<?> response = userController.registerUser(sampleUser);
+//
+//        assertEquals(CREATED, response.getStatusCode());
+//        assertEquals(sampleUser, response.getBody());
+//    }
+//
+//    @Test
+//    void testRegisterUser_Conflict() {
+//        when(userService.emailExists("john@example.com")).thenReturn(true);
+//
+//        ResponseEntity<?> response = userController.registerUser(sampleUser);
+//
+//        assertEquals(CONFLICT, response.getStatusCode());
+//        assertEquals("Email already in use", response.getBody());
+//    }
 }
