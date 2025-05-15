@@ -7,20 +7,33 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Positive;
 
 @Entity
+@Table(name = "movie")
 public class Movie {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long movieId;
+    
     private String title;
+    
     private String genre;
+    
+    @Min(value = 15, message = "Duration must be at least 15 minutes")
+    @Max(value = 500, message = "Duration must be realistic (max 500 mins)")
     private int duration;
+    
     private String language;
+    
+    @Positive(message = "Price must be a positive value")
     private double price;
+    
     private boolean isUpcoming;
-
     private String image;      
     private String description;  
     private String trailer; 

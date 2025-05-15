@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.capgemini.CineBuzz.entities.Booking;
 import com.capgemini.CineBuzz.services.BookingService;
 
+import jakarta.validation.Valid;
+
 
 @RestController
 @RequestMapping("/api/bookings")
@@ -46,7 +48,7 @@ public class BookingController {
     }
 
     @PostMapping
-    public ResponseEntity<Booking> createBooking(@RequestBody Booking booking) {
+    public ResponseEntity<Booking> createBooking(@Valid @RequestBody Booking booking) {
         Booking savedBooking = bookingService.createBooking(booking);
         return ResponseEntity
                 .status(HttpStatus.CREATED)
@@ -55,7 +57,7 @@ public class BookingController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Booking> updateBooking(@PathVariable Long id, @RequestBody Booking booking) {
+    public ResponseEntity<Booking> updateBooking(@PathVariable Long id,@Valid @RequestBody Booking booking) {
         Booking updatedBooking = bookingService.updateBooking(id, booking);
         return ResponseEntity.status(HttpStatus.OK).body(updatedBooking);
     }

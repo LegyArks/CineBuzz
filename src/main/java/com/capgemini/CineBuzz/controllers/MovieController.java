@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import com.capgemini.CineBuzz.entities.Movie;
 import com.capgemini.CineBuzz.services.MovieService;
 
+import jakarta.validation.Valid;
+
 import java.net.URI;
 import java.util.List;
 
@@ -35,7 +37,7 @@ public class MovieController {
     }
 
     @PostMapping
-    public ResponseEntity<Movie> createMovie(@RequestBody Movie movie) {
+    public ResponseEntity<Movie> createMovie(@Valid @RequestBody Movie movie) {
         Movie savedMovie = movieService.createMovie(movie);
         return ResponseEntity
                 .status(HttpStatus.CREATED)
@@ -44,13 +46,13 @@ public class MovieController {
     }
 
     @PutMapping("/{movieId}")
-    public ResponseEntity<Movie> updateMovie(@PathVariable Long movieId, @RequestBody Movie movie) {
+    public ResponseEntity<Movie> updateMovie(@PathVariable Long movieId,@Valid @RequestBody Movie movie) {
         Movie updatedMovie = movieService.updateMovie(movieId, movie);
         return ResponseEntity.status(HttpStatus.OK).body(updatedMovie);
     }
 
     @PatchMapping("/{movieId}")
-    public ResponseEntity<Movie> patchMovie(@PathVariable Long movieId, @RequestBody Movie movie) {
+    public ResponseEntity<Movie> patchMovie(@PathVariable Long movieId,@Valid @RequestBody Movie movie) {
         Movie patchedMovie = movieService.patchMovie(movieId, movie);
         return ResponseEntity.ok(patchedMovie);
     }

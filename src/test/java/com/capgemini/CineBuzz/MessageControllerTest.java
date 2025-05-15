@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.web.servlet.MockMvc;
@@ -31,10 +32,9 @@ class MessageControllerTest {
 
     @BeforeEach
     void setUp() {
+        MockitoAnnotations.openMocks(this); 
         message = new Message(1L, "Test User", "Hello!", LocalDateTime.now());
-        MockMvc mockMvc = MockMvcBuilders.standaloneSetup(messageController).build();
     }
-
     @Test
     void testCreateMessage() {
         when(messageService.createMessage(any(Message.class))).thenReturn(message);

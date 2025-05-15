@@ -5,11 +5,16 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.FutureOrPresent;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PositiveOrZero;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
+@Table(name = "showtime")
 public class Showtime {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,8 +23,15 @@ public class Showtime {
 	@ManyToOne
 	@JoinColumn(name="movieId", referencedColumnName="movieId")
 	private Movie movie;
+	
+	@NotNull(message = "Show date is required")
+    @FutureOrPresent(message = "Show date cannot be in the past")
 	private LocalDate showDate;
+	
+	 @NotNull(message = "Show time is required")
 	private LocalTime showTime;
+	
+	@PositiveOrZero(message = "Available seats cannot be negative")
 	private int availableSeats;
 
 	public Showtime() {
