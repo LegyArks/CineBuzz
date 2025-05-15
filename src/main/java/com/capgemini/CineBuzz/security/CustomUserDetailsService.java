@@ -1,4 +1,4 @@
-package com.capgemini.MyWebProject.security;
+package com.capgemini.CineBuzz.security;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 
 import com.capgemini.CineBuzz.entities.User;
 import com.capgemini.CineBuzz.repositories.UserRepository;
+
+
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
