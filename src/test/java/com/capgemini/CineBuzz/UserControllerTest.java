@@ -1,6 +1,7 @@
 package com.capgemini.CineBuzz;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import static org.mockito.Mockito.*;
 import static org.springframework.http.HttpStatus.*;
 
@@ -47,7 +48,6 @@ class UserControllerTest {
     @Test
     void testCreateUser() {
         when(userService.createUser(sampleUser)).thenReturn(sampleUser);
-
         ResponseEntity<User> response = userController.createUser(sampleUser, null);
 
         assertEquals(CREATED, response.getStatusCode());

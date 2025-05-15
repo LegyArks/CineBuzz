@@ -74,7 +74,7 @@ public class ShowtimeControllerTest {
 
         when(showtimeService.createShowtime(input)).thenReturn(saved);
 
-        ResponseEntity<Showtime> response = showtimeController.createShowtime(input);
+        ResponseEntity<Showtime> response = showtimeController.createShowtime(input,null);
 
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
         assertEquals(10L, response.getBody().getShowId());
@@ -86,7 +86,7 @@ public class ShowtimeControllerTest {
 
         when(showtimeService.updateShowtime(eq(5L), any(Showtime.class))).thenReturn(updated);
 
-        ResponseEntity<Showtime> response = showtimeController.updateShowtime(5L, updated);
+        ResponseEntity<Showtime> response = showtimeController.updateShowtime(5L, updated, null);
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertEquals(120, response.getBody().getAvailableSeats());
@@ -99,7 +99,7 @@ public class ShowtimeControllerTest {
 
         when(showtimeService.patchShowtime(eq(7L), any())).thenReturn(patched);
 
-        ResponseEntity<Showtime> response = showtimeController.patchShowtime(7L, patch);
+        ResponseEntity<Showtime> response = showtimeController.patchShowtime(7L, patch, null);
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertEquals(50, response.getBody().getAvailableSeats());

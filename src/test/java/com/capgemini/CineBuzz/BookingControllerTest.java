@@ -83,7 +83,7 @@ class BookingControllerTest {
     void testCreateBooking() {
         when(bookingService.createBooking(any(Booking.class))).thenReturn(booking);
 
-        ResponseEntity<Booking> response = bookingController.createBooking(booking);
+        ResponseEntity<Booking> response = bookingController.createBooking(booking, null);
 
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
         assertNotNull(response.getBody());
@@ -95,7 +95,7 @@ class BookingControllerTest {
     void testUpdateBooking() {
         when(bookingService.updateBooking(eq(1L), any(Booking.class))).thenReturn(booking);
 
-        ResponseEntity<Booking> response = bookingController.updateBooking(1L, booking);
+        ResponseEntity<Booking> response = bookingController.updateBooking(1L, booking, null);
 
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());

@@ -60,7 +60,7 @@ class MovieControllerTest {
     void testCreateMovie() {
         when(movieService.createMovie(sampleMovie)).thenReturn(sampleMovie);
 
-        ResponseEntity<Movie> response = movieController.createMovie(sampleMovie);
+        ResponseEntity<Movie> response = movieController.createMovie(sampleMovie, null);
 
         assertEquals(201, response.getStatusCode().value());
         assertEquals("Inception", response.getBody().getTitle());
@@ -71,7 +71,7 @@ class MovieControllerTest {
     void testUpdateMovie() {
         when(movieService.updateMovie(eq(1L), any(Movie.class))).thenReturn(sampleMovie);
 
-        ResponseEntity<Movie> response = movieController.updateMovie(1L, sampleMovie);
+        ResponseEntity<Movie> response = movieController.updateMovie(1L, sampleMovie, null);
 
         assertEquals(200, response.getStatusCode().value());
         assertEquals("Inception", response.getBody().getTitle());
@@ -81,7 +81,7 @@ class MovieControllerTest {
     void testPatchMovie() {
         when(movieService.patchMovie(eq(1L), any(Movie.class))).thenReturn(sampleMovie);
 
-        ResponseEntity<Movie> response = movieController.patchMovie(1L, sampleMovie);
+        ResponseEntity<Movie> response = movieController.patchMovie(1L, sampleMovie, null);
 
         assertEquals(200, response.getStatusCode().value());
         assertEquals("Inception", response.getBody().getTitle());

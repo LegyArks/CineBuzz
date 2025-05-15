@@ -1,16 +1,19 @@
 package com.capgemini.CineBuzz;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import static org.mockito.Mockito.*;
+
+
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.*;
 
 import com.capgemini.CineBuzz.entities.User;
 import com.capgemini.CineBuzz.exceptions.UserNotFoundException;
 import com.capgemini.CineBuzz.repositories.UserRepository;
 import com.capgemini.CineBuzz.services.UserServiceImpl;
-
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.*;
 
 import java.util.*;
 
@@ -24,7 +27,7 @@ class UserServiceImplTest {
 
     private User user;
 
-    @BeforeEach
+    @BeforeEach	
     void setUp() {
         MockitoAnnotations.openMocks(this);
         user = new User(1L, "John Doe", "john@example.com", "pass123", "9876543210", "user");
