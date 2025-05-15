@@ -1,25 +1,23 @@
 package com.capgemini.CineBuzz;
 
-import static org.mockito.Mockito.*;
-import static org.assertj.core.api.Assertions.*;
-
 import com.capgemini.CineBuzz.controllers.ShowtimeController;
 import com.capgemini.CineBuzz.entities.Movie;
 import com.capgemini.CineBuzz.entities.Showtime;
 import com.capgemini.CineBuzz.services.ShowtimeService;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 public class ShowtimeControllerTest {
 
@@ -32,112 +30,108 @@ public class ShowtimeControllerTest {
     private Movie mockMovie;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         MockitoAnnotations.openMocks(this);
-        mockMovie = new Movie(); // You can set mock fields if needed
+        mockMovie = new Movie(); // Or mock(Movie.class)
     }
 
     @Test
-    public void testGetAllShowtimes() {
-        Showtime s1 = new Showtime(1L, mockMovie, LocalDate.now(), LocalTime.of(12, 0), 100);
+    void getAllShowtimes_returnsList() {
+        Showtime s1 = new Showtime(1L, mockMovie, LocalDate.now(), LocalTime.NOON, 100);
         Showtime s2 = new Showtime(2L, mockMovie, LocalDate.now(), LocalTime.of(15, 0), 80);
-        when(showtimeService.getAllShowtimes()).thenReturn(Arrays.asList(s1, s2));
+        when(showtimeService.getAllShowtimes()).thenReturn(List.of(s1, s2));
 
         ResponseEntity<List<Showtime>> response = showtimeController.getAllShowtimes();
 
-        assertThat(response.getStatusCodeValue()).isEqualTo(200);
-        assertThat(response.getBody()).hasSize(2);
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(2, response.getBody().size());
     }
 
     @Test
-    public void testGetShowtimeById_Found() {
-        Long showId = 1L;
-        Showtime mockShowtime = new Showtime(showId, mockMovie, LocalDate.now(), LocalTime.of(18, 0), 90);
-        when(showtimeService.getShowtimeById(showId)).thenReturn(mockShowtime);
+    void getShowtimeById_found() {
+        Showtime s = new Showtime(1L, mockMovie, LocalDate.now(), LocalTime.of(18, 0), 90);
+        when(showtimeService.getShowtimeById(1L)).thenReturn(s);
 
-        ResponseEntity<Showtime> response = showtimeController.getShowtime(showId);
+        ResponseEntity<Showtime> response = showtimeController.getShowtime(1L);
 
-        assertThat(response.getStatusCodeValue()).isEqualTo(200);
-        assertThat(response.getBody().getShowId()).isEqualTo(showId);
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(1L, response.getBody().getShowId());
     }
 
     @Test
-    public void testGetShowtimeById_NotFound() {
+    void getShowtimeById_notFound() {
         when(showtimeService.getShowtimeById(99L)).thenReturn(null);
 
         ResponseEntity<Showtime> response = showtimeController.getShowtime(99L);
 
-        assertThat(response.getStatusCodeValue()).isEqualTo(404);
+        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
     }
 
     @Test
-    public void testCreateShowtime() {
+    void createShowtime_success() {
         Showtime input = new Showtime(null, mockMovie, LocalDate.now(), LocalTime.of(14, 0), 100);
         Showtime saved = new Showtime(10L, mockMovie, input.getShowDate(), input.getShowTime(), input.getAvailableSeats());
-        when(showtimeService.createShowtime(any(Showtime.class))).thenReturn(saved);
+
+        when(showtimeService.createShowtime(input)).thenReturn(saved);
 
         ResponseEntity<Showtime> response = showtimeController.createShowtime(input);
 
-        assertThat(response.getStatusCodeValue()).isEqualTo(201);
-        assertThat(response.getBody().getShowId()).isEqualTo(10L);
+        assertEquals(HttpStatus.CREATED, response.getStatusCode());
+        assertEquals(10L, response.getBody().getShowId());
     }
 
     @Test
-    public void testUpdateShowtime() {
-        Long showId = 5L;
-        Showtime input = new Showtime(null, mockMovie, LocalDate.now(), LocalTime.of(16, 0), 120);
-        Showtime updated = new Showtime(showId, mockMovie, input.getShowDate(), input.getShowTime(), input.getAvailableSeats());
-        when(showtimeService.updateShowtime(eq(showId), any(Showtime.class))).thenReturn(updated);
+    void updateShowtime_success() {
+        Showtime updated = new Showtime(5L, mockMovie, LocalDate.now(), LocalTime.of(16, 0), 120);
 
-        ResponseEntity<Showtime> response = showtimeController.updateShowtime(showId, input);
+        when(showtimeService.updateShowtime(eq(5L), any(Showtime.class))).thenReturn(updated);
 
-        assertThat(response.getStatusCodeValue()).isEqualTo(200);
-        assertThat(response.getBody().getAvailableSeats()).isEqualTo(120);
+        ResponseEntity<Showtime> response = showtimeController.updateShowtime(5L, updated);
+
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(120, response.getBody().getAvailableSeats());
     }
 
     @Test
-    public void testPatchShowtime() {
-        Long showId = 7L;
+    void patchShowtime_success() {
         Showtime patch = new Showtime(null, null, null, null, 50);
-        Showtime patched = new Showtime(showId, mockMovie, LocalDate.now(), LocalTime.of(20, 0), 50);
-        when(showtimeService.patchShowtime(eq(showId), any(Showtime.class))).thenReturn(patched);
+        Showtime patched = new Showtime(7L, mockMovie, LocalDate.now(), LocalTime.of(20, 0), 50);
 
-        ResponseEntity<Showtime> response = showtimeController.patchShowtime(showId, patch);
+        when(showtimeService.patchShowtime(eq(7L), any())).thenReturn(patched);
 
-        assertThat(response.getStatusCodeValue()).isEqualTo(200);
-        assertThat(response.getBody().getAvailableSeats()).isEqualTo(50);
+        ResponseEntity<Showtime> response = showtimeController.patchShowtime(7L, patch);
+
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(50, response.getBody().getAvailableSeats());
     }
 
     @Test
-    public void testDeleteShowtime_Success() {
-        Long showId = 3L;
-        when(showtimeService.deleteShowtime(showId)).thenReturn(true);
+    void deleteShowtime_success() {
+        when(showtimeService.deleteShowtime(3L)).thenReturn(true);
 
-        ResponseEntity<Void> response = showtimeController.deleteShowtime(showId);
+        ResponseEntity<Void> response = showtimeController.deleteShowtime(3L);
 
-        assertThat(response.getStatusCodeValue()).isEqualTo(204);
+        assertEquals(HttpStatus.NO_CONTENT, response.getStatusCode());
     }
 
     @Test
-    public void testDeleteShowtime_NotFound() {
-        Long showId = 4L;
-        when(showtimeService.deleteShowtime(showId)).thenReturn(false);
+    void deleteShowtime_notFound() {
+        when(showtimeService.deleteShowtime(4L)).thenReturn(false);
 
-        ResponseEntity<Void> response = showtimeController.deleteShowtime(showId);
+        ResponseEntity<Void> response = showtimeController.deleteShowtime(4L);
 
-        assertThat(response.getStatusCodeValue()).isEqualTo(404);
+        assertEquals(HttpStatus.NOT_FOUND, response.getStatusCode());
     }
 
     @Test
-    public void testGetShowtimesByMovieId() {
-        Long movieId = 101L;
+    void getShowtimesByMovieId_success() {
         Showtime s = new Showtime(1L, mockMovie, LocalDate.now(), LocalTime.of(10, 0), 75);
-        when(showtimeService.findByMovieId(movieId)).thenReturn(Collections.singletonList(s));
+        when(showtimeService.findByMovieId(101L)).thenReturn(List.of(s));
 
-        ResponseEntity<List<Showtime>> response = showtimeController.getShowtimesByMovieId(movieId);
+        ResponseEntity<List<Showtime>> response = showtimeController.getShowtimesByMovieId(101L);
 
-        assertThat(response.getStatusCodeValue()).isEqualTo(200);
-        assertThat(response.getBody()).hasSize(1);
-        assertThat(response.getBody().get(0).getAvailableSeats()).isEqualTo(75);
+        assertEquals(HttpStatus.OK, response.getStatusCode());
+        assertEquals(1, response.getBody().size());
+        assertEquals(75, response.getBody().get(0).getAvailableSeats());
     }
 }
