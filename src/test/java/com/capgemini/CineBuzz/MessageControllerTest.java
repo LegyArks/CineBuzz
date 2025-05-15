@@ -13,6 +13,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.validation.BindingResult;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -37,9 +38,12 @@ class MessageControllerTest {
     }
     @Test
     void testCreateMessage() {
+    	BindingResult mockBindingResult = mock(BindingResult.class);
+        when(mockBindingResult.hasErrors()).thenReturn(false);
+    	
         when(messageService.createMessage(any(Message.class))).thenReturn(message);
 
-        ResponseEntity<Message> response = messageController.createMessage(message, null);
+        ResponseEntity<Message> response = messageController.createMessage(message, mockBindingResult);
 
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
         assertEquals("Test User", response.getBody().getName());

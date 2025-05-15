@@ -15,6 +15,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 
 import java.util.Arrays;
 import java.util.List;
@@ -58,9 +59,12 @@ class MovieControllerTest {
 
     @Test
     void testCreateMovie() {
+    	BindingResult mockBindingResult = mock(BindingResult.class);
+        when(mockBindingResult.hasErrors()).thenReturn(false);
+        
         when(movieService.createMovie(sampleMovie)).thenReturn(sampleMovie);
 
-        ResponseEntity<Movie> response = movieController.createMovie(sampleMovie, null);
+        ResponseEntity<Movie> response = movieController.createMovie(sampleMovie, mockBindingResult);
 
         assertEquals(201, response.getStatusCode().value());
         assertEquals("Inception", response.getBody().getTitle());
@@ -69,9 +73,12 @@ class MovieControllerTest {
 
     @Test
     void testUpdateMovie() {
+    	BindingResult mockBindingResult = mock(BindingResult.class);
+        when(mockBindingResult.hasErrors()).thenReturn(false);
+    	
         when(movieService.updateMovie(eq(1L), any(Movie.class))).thenReturn(sampleMovie);
 
-        ResponseEntity<Movie> response = movieController.updateMovie(1L, sampleMovie, null);
+        ResponseEntity<Movie> response = movieController.updateMovie(1L, sampleMovie, mockBindingResult);
 
         assertEquals(200, response.getStatusCode().value());
         assertEquals("Inception", response.getBody().getTitle());
@@ -79,9 +86,13 @@ class MovieControllerTest {
 
     @Test
     void testPatchMovie() {
+    	
+    	BindingResult mockBindingResult = mock(BindingResult.class);
+        when(mockBindingResult.hasErrors()).thenReturn(false);
+        
         when(movieService.patchMovie(eq(1L), any(Movie.class))).thenReturn(sampleMovie);
 
-        ResponseEntity<Movie> response = movieController.patchMovie(1L, sampleMovie, null);
+        ResponseEntity<Movie> response = movieController.patchMovie(1L, sampleMovie, mockBindingResult);
 
         assertEquals(200, response.getStatusCode().value());
         assertEquals("Inception", response.getBody().getTitle());
