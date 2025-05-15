@@ -39,7 +39,7 @@ class MessageControllerTest {
     void testCreateMessage() {
         when(messageService.createMessage(any(Message.class))).thenReturn(message);
 
-        ResponseEntity<Message> response = messageController.createMessage(message);
+        ResponseEntity<Message> response = messageController.createMessage(message, null);
 
         assertEquals(HttpStatus.CREATED, response.getStatusCode());
         assertEquals("Test User", response.getBody().getName());
