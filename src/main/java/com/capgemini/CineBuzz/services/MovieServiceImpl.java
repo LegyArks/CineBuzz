@@ -31,7 +31,7 @@ public class MovieServiceImpl implements MovieService {
 				.orElseThrow(() -> new MovieNotFoundException("Movie not found with id " + movieId));
 	}
 
-	@Override
+	@Override   
 	public Movie createMovie(Movie movie) {
 		return movieRepository.save(movie);
 	}
