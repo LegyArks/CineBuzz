@@ -44,20 +44,20 @@ public class UserController {
 	}
 
 	@PostMapping
-	public ResponseEntity<User> createUser(@RequestBody User user) {
+	public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
 		User savedUser = userService.createUser(user);
 		return ResponseEntity.status(HttpStatus.CREATED).location(URI.create("/api/users/" + savedUser.getUserId()))
 				.body(savedUser);
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user) {
+	public ResponseEntity<User> updateUser(@PathVariable Long id,@Valid @RequestBody User user) {
 		User updatedUser = userService.updateUser(id, user);
 		return ResponseEntity.status(HttpStatus.OK).body(updatedUser);
 	}
 
 	@PatchMapping("/{id}")
-	public ResponseEntity<User> patchUser(@PathVariable Long id, @RequestBody User user) {
+	public ResponseEntity<User> patchUser(@PathVariable Long id,@Valid @RequestBody User user) {
 		User patched = userService.patchUser(id, user);
 		return ResponseEntity.ok(patched);
 	}

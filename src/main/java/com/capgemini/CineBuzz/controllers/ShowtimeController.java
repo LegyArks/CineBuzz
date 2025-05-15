@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import com.capgemini.CineBuzz.entities.Showtime;
 import com.capgemini.CineBuzz.services.ShowtimeService;
 
+import jakarta.validation.Valid;
+
 import java.net.URI;
 import java.util.List;
 
@@ -38,7 +40,7 @@ public class ShowtimeController {
     }
 
     @PostMapping
-    public ResponseEntity<Showtime> createShowtime(@RequestBody Showtime showtime) {
+    public ResponseEntity<Showtime> createShowtime(@Valid @RequestBody Showtime showtime) {
         Showtime savedShowtime = showtimeService.createShowtime(showtime);
         return ResponseEntity
                 .status(HttpStatus.CREATED)
@@ -47,13 +49,13 @@ public class ShowtimeController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Showtime> updateShowtime(@PathVariable Long showId, @RequestBody Showtime showtime) {
+    public ResponseEntity<Showtime> updateShowtime(@PathVariable Long showId,@Valid @RequestBody Showtime showtime) {
         Showtime updatedShowtime = showtimeService.updateShowtime(showId, showtime);
         return ResponseEntity.status(HttpStatus.OK).body(updatedShowtime);
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<Showtime> patchShowtime(@PathVariable Long showId, @RequestBody Showtime showtime) {
+    public ResponseEntity<Showtime> patchShowtime(@PathVariable Long showId,@Valid @RequestBody Showtime showtime) {
         Showtime patched = showtimeService.patchShowtime(showId, showtime);
         return ResponseEntity.ok(patched);
     }
