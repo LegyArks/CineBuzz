@@ -39,7 +39,6 @@ public class Showtime {
 	}
 
 	public Showtime(Long showId, LocalDate showDate, LocalTime showTime, int availableSeats) {
-		super();
 		this.showId = showId;
 		this.showDate = showDate;
 		this.showTime = showTime;
@@ -49,7 +48,6 @@ public class Showtime {
 
 
 	public Showtime(Long showId, Movie movie, LocalDate showDate, LocalTime showTime, int availableSeats) {
-		super();
 		this.showId = showId;
 		this.movie = movie;
 		this.showDate = showDate;
