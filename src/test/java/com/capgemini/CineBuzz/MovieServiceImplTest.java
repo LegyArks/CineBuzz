@@ -28,7 +28,7 @@ class MovieServiceImplTest {
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
-        sampleMovie = new Movie(1L, "Inception", "Sci-Fi", 148, "English", 12.5, false, "image.jpg", "Great movie", "trailer.mp4");
+        sampleMovie = new Movie(1L, "Inception", "Sci-Fi", 148, "English", 12.5, false, null , "Great movie", "trailer.mp4");
     }
 
     @Test

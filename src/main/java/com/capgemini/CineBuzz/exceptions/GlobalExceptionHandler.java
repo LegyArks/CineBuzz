@@ -15,7 +15,7 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 @ControllerAdvice
-public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
+public class GlobalExceptionHandler {
 
     private static final String TIMESTAMP = "timestamp";
     private static final String MESSAGE = "message";
@@ -29,6 +29,11 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         errorDetails.put(MESSAGE, message);
         errorDetails.put(STATUS, statusCode);
         return errorDetails;
+    }
+    
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<Object> handleIllegalArgument(IllegalArgumentException ex) {
+        return new ResponseEntity<>(createErrorDetails(ex.getMessage(), HttpStatus.BAD_REQUEST.value()), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(UserNotFoundException.class)
@@ -71,25 +76,11 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(createErrorDetails(ex.getMessage(), HttpStatus.BAD_REQUEST.value()), HttpStatus.BAD_REQUEST);
     }
 
-    @Override
-    protected ResponseEntity<Object> handleMethodArgumentNotValid(
-            MethodArgumentNotValidException ex, HttpHeaders headers, 
-            HttpStatusCode status, WebRequest request) {
 
-        Map<String, Object> errorDetails = new HashMap<>();
-        errorDetails.put(TIMESTAMP, LocalDateTime.now());
-        errorDetails.put(STATUS, HttpStatus.BAD_REQUEST.value());
-
-        Map<String, String> fieldErrors = new HashMap<>();
-        ex.getBindingResult().getFieldErrors()
-                .forEach(error -> fieldErrors.put(error.getField(), error.getDefaultMessage()));
-
-        errorDetails.put(ERRORS, fieldErrors);
-        return new ResponseEntity<>(errorDetails, HttpStatus.BAD_REQUEST);
-    }
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Object> handleAllExceptions(Exception ex) {
+    	System.out.println("Here  hjgjhgjh" );
         Map<String, Object> errorDetails = new HashMap<>();
         errorDetails.put(TIMESTAMP, LocalDateTime.now());
         errorDetails.put(MESSAGE, "Unexpected error occurred");

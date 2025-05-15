@@ -34,8 +34,11 @@ public class Movie {
     private double price;
     
     private boolean isUpcoming;
-    private String image;      
+    
+    private byte[] image;  
+    
     private String description;  
+    
     private String trailer; 
     
     @OneToMany(mappedBy = "movie")
@@ -43,7 +46,7 @@ public class Movie {
 
     public Movie() {}
 
-    public Movie(Long movieId, String title, String genre, int duration, String language, double price, boolean isUpcoming, String image, String description, String trailer) {
+    public Movie(Long movieId, String title, String genre, int duration, String language, double price, boolean isUpcoming, byte[] image, String description, String trailer) {
         this.movieId = movieId;
         this.title = title;
         this.genre = genre;
@@ -79,8 +82,8 @@ public class Movie {
     public boolean isUpcoming() { return isUpcoming; }
     public void setUpcoming(boolean upcoming) { isUpcoming = upcoming; }
 
-    public String getImage() { return image; }
-    public void setImage(String image) { this.image = image; }
+    public byte[] getImage() { return image; }
+    public void setImage(byte[] image) { this.image = image; }
 
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }

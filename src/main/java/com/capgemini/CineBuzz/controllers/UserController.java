@@ -5,6 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import org.springframework.validation.BindingResult;
+
 import com.capgemini.CineBuzz.entities.User;
 import com.capgemini.CineBuzz.services.UserService;
 
@@ -44,22 +46,34 @@ public class UserController {
 	}
 
 	@PostMapping
-	public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
+	public ResponseEntity<User> createUser(@Valid @RequestBody User user, BindingResult  bindingResult) {
+		if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
 		User savedUser = userService.createUser(user);
+		
 		return ResponseEntity.status(HttpStatus.CREATED).location(URI.create("/api/users/" + savedUser.getUserId()))
 				.body(savedUser);
 	}
 
 
 	@PutMapping("/{userId}")
-	public ResponseEntity<User> updateUser(@PathVariable Long userId,@Valid @RequestBody User user) {
+	public ResponseEntity<User> updateUser(@PathVariable Long userId,@Valid @RequestBody User user,BindingResult  bindingResult) {
+		if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
 		User updatedUser = userService.updateUser(userId, user);
+		
 		return ResponseEntity.status(HttpStatus.OK).body(updatedUser);
 	}
 
 	@PatchMapping("/{id}")
-	public ResponseEntity<User> patchUser(@PathVariable Long id,@Valid @RequestBody User user) {
+	public ResponseEntity<User> patchUser(@PathVariable Long id,@Valid @RequestBody User user, BindingResult  bindingResult) {
+		if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
 		User patched = userService.patchUser(id, user);
+		
 		return ResponseEntity.ok(patched);
 	}
 

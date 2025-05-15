@@ -48,7 +48,7 @@ class UserControllerTest {
     void testCreateUser() {
         when(userService.createUser(sampleUser)).thenReturn(sampleUser);
 
-        ResponseEntity<User> response = userController.createUser(sampleUser);
+        ResponseEntity<User> response = userController.createUser(sampleUser, null);
 
         assertEquals(CREATED, response.getStatusCode());
         assertEquals("John Doe", response.getBody().getName());
