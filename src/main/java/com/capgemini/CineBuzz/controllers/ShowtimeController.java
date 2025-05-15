@@ -3,6 +3,7 @@ package com.capgemini.CineBuzz.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import com.capgemini.CineBuzz.entities.Showtime;
@@ -40,7 +41,10 @@ public class ShowtimeController {
     }
 
     @PostMapping
-    public ResponseEntity<Showtime> createShowtime(@Valid @RequestBody Showtime showtime) {
+    public ResponseEntity<Showtime> createShowtime(@Valid @RequestBody Showtime showtime, BindingResult  bindingResult) {
+		if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
         Showtime savedShowtime = showtimeService.createShowtime(showtime);
         return ResponseEntity
                 .status(HttpStatus.CREATED)
@@ -50,15 +54,20 @@ public class ShowtimeController {
 
     @PutMapping("/{id}")
 
-    public ResponseEntity<Showtime> updateShowtime(@PathVariable("id") Long showId,@Valid @RequestBody Showtime showtime) {
+    public ResponseEntity<Showtime> updateShowtime(@PathVariable("id") Long showId,@Valid @RequestBody Showtime showtime , BindingResult  bindingResult) {
+		if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
         Showtime updatedShowtime = showtimeService.updateShowtime(showId, showtime);
         return ResponseEntity.status(HttpStatus.OK).body(updatedShowtime);
     }
 
     @PatchMapping("/{id}")
 
-    public ResponseEntity<Showtime> patchShowtime(@PathVariable("id") Long showId,@Valid @RequestBody Showtime showtime) {
-
+    public ResponseEntity<Showtime> patchShowtime(@PathVariable("id") Long showId,@Valid @RequestBody Showtime showtime, BindingResult  bindingResult) {
+		if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
         Showtime patched = showtimeService.patchShowtime(showId, showtime);
         return ResponseEntity.ok(patched);
     }

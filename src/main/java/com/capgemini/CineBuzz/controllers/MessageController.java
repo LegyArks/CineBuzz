@@ -8,6 +8,7 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
@@ -24,11 +25,13 @@ public class MessageController {
     }
 
     @PostMapping
-    public ResponseEntity<Message> createMessage(@Valid @RequestBody Message message) {
+    public ResponseEntity<Message> createMessage(@Valid @RequestBody Message message ,  BindingResult  bindingResult) {
 //    	Long userId = message.getUser().getId();
 //        User user = userService.getUserById(userId);
 //        message.setUser(user);
-    	
+		if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
     	Message savedMessage = messageService.createMessage(message);
         return ResponseEntity
                 .status(HttpStatus.CREATED)
