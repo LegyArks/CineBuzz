@@ -5,6 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import org.springframework.validation.BindingResult;
+
 import com.capgemini.CineBuzz.entities.User;
 import com.capgemini.CineBuzz.services.UserService;
 
@@ -44,21 +46,34 @@ public class UserController {
 	}
 
 	@PostMapping
-	public ResponseEntity<User> createUser(@RequestBody User user) {
+	public ResponseEntity<User> createUser(@Valid @RequestBody User user, BindingResult  bindingResult) {
+		if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
 		User savedUser = userService.createUser(user);
+		
 		return ResponseEntity.status(HttpStatus.CREATED).location(URI.create("/api/users/" + savedUser.getUserId()))
 				.body(savedUser);
 	}
 
+
 	@PutMapping("/{userId}")
-	public ResponseEntity<User> updateUser(@PathVariable Long userId, @RequestBody User user) {
+	public ResponseEntity<User> updateUser(@PathVariable Long userId,@Valid @RequestBody User user,BindingResult  bindingResult) {
+		if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
 		User updatedUser = userService.updateUser(userId, user);
+		
 		return ResponseEntity.status(HttpStatus.OK).body(updatedUser);
 	}
 
 	@PatchMapping("/{id}")
-	public ResponseEntity<User> patchUser(@PathVariable Long id, @RequestBody User user) {
+	public ResponseEntity<User> patchUser(@PathVariable Long id,@Valid @RequestBody User user, BindingResult  bindingResult) {
+		if (bindingResult.hasErrors()) {
+			throw new IllegalArgumentException("Validation has failed");
+		}
 		User patched = userService.patchUser(id, user);
+		
 		return ResponseEntity.ok(patched);
 	}
 
@@ -77,39 +92,4 @@ public class UserController {
 		User user = userService.findByEmail(email);
 		return ResponseEntity.ok(user);
 	}
-	
-//	@PostMapping("/login")
-//	public ResponseEntity<?> loginUser(@RequestBody Map<String, String> credentials) {
-//		String email = credentials.get("email");
-//		String password = credentials.get("password");
-//
-//		try {
-//			User user = userService.authenticateUser(email, password);
-//			return ResponseEntity.ok(user);
-//		} catch (RuntimeException e) {
-//			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
-//		}
-//	}
-//
-//	@PostMapping("/register")
-//	public ResponseEntity<?> registerUser(@Valid @RequestBody User userDTO) {
-//		// Check if email already exists
-//		if (userService.emailExists(userDTO.getEmail())) {
-//			return ResponseEntity.status(HttpStatus.CONFLICT).body("Email already in use");
-//		}
-//
-//		// Convert DTO to Entity
-//		User user = new User();
-//		user.setName(userDTO.getName());
-//		user.setEmail(userDTO.getEmail());
-//		user.setPassword(userDTO.getPassword());
-//		user.setPhoneNumber(userDTO.getphoneNumber());
-//
-//		User savedUser = userService.createUser(user);
-//		return ResponseEntity.status(HttpStatus.CREATED).location(URI.create("/api/users/" + savedUser.getUserId()))
-//				.body(savedUser);
-//	}
-
-	
-
 }

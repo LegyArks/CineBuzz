@@ -1,17 +1,23 @@
 package com.capgemini.CineBuzz.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PastOrPresent;
+
 import java.time.LocalDateTime;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
+@Table(name = "message")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Message {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long messageId;
 
+    @NotBlank(message = "Name shoundn't be blank")
     private String name;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -20,6 +26,8 @@ public class Message {
 
     private String message;
 
+	@NotNull(message = "TimeStamp is required")
+    @PastOrPresent(message = "TimeStamp cannot be in the future")
     private LocalDateTime timestamp;
 
     public Message() {
@@ -90,4 +98,6 @@ public class Message {
     public String toString() {
         return "Message [messageId=" + messageId + ", name=" + name + ", user=" + (user != null ? user.getUserId() : null) + ", message=" + message + ", timestamp=" + timestamp + "]";
     }
+    
+    //To check this
 }

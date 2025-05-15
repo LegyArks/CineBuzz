@@ -3,6 +3,7 @@ package com.capgemini.CineBuzz.exceptions;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
+
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -13,87 +14,77 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-
 @ControllerAdvice
-public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
+public class GlobalExceptionHandler {
 
+    private static final String TIMESTAMP = "timestamp";
+    private static final String MESSAGE = "message";
+    private static final String STATUS = "status";
+    private static final String DETAILS = "details";
+    private static final String ERRORS = "errors";
+
+    private Map<String, Object> createErrorDetails(String message, int statusCode) {
+        Map<String, Object> errorDetails = new HashMap<>();
+        errorDetails.put(TIMESTAMP, LocalDateTime.now());
+        errorDetails.put(MESSAGE, message);
+        errorDetails.put(STATUS, statusCode);
+        return errorDetails;
+    }
+    
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<Object> handleIllegalArgument(IllegalArgumentException ex) {
+        return new ResponseEntity<>(createErrorDetails(ex.getMessage(), HttpStatus.BAD_REQUEST.value()), HttpStatus.BAD_REQUEST);
+    }
 
     @ExceptionHandler(UserNotFoundException.class)
     public ResponseEntity<Object> handleUserNotFound(UserNotFoundException ex) {
-        Map<String, Object> errorDetails = new HashMap<>();
-        errorDetails.put("timestamp", LocalDateTime.now());
-        errorDetails.put("message", ex.getMessage());
-        errorDetails.put("status", HttpStatus.NOT_FOUND.value());
-        return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(createErrorDetails(ex.getMessage(), HttpStatus.NOT_FOUND.value()), HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(MessageNotFoundException.class)
-	public ResponseEntity<Object> handleMessageNotFound(MessageNotFoundException ex) {
-	    Map<String, Object> errorDetails = new HashMap<>();
-	    errorDetails.put("timestamp", LocalDateTime.now());
-	    errorDetails.put("message", ex.getMessage());
-	    errorDetails.put("status", HttpStatus.NOT_FOUND.value());
-	    return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
-	}
-	
+    public ResponseEntity<Object> handleMessageNotFound(MessageNotFoundException ex) {
+        return new ResponseEntity<>(createErrorDetails(ex.getMessage(), HttpStatus.NOT_FOUND.value()), HttpStatus.NOT_FOUND);
+    }
+
     @ExceptionHandler(AdminNotFoundException.class)
-	public ResponseEntity<Object> handleAdminNotFound(AdminNotFoundException ex) {
-	    Map<String, Object> errorDetails = new HashMap<>();
-	    errorDetails.put("timestamp", LocalDateTime.now());
-	    errorDetails.put("message", ex.getMessage());
-	    errorDetails.put("status", HttpStatus.NOT_FOUND.value());
-	    return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
-	}
-    
+    public ResponseEntity<Object> handleAdminNotFound(AdminNotFoundException ex) {
+        return new ResponseEntity<>(createErrorDetails(ex.getMessage(), HttpStatus.NOT_FOUND.value()), HttpStatus.NOT_FOUND);
+    }
+
     @ExceptionHandler(BookingNotFoundException.class)
-	public ResponseEntity<Object> handleBookingNotFound(BookingNotFoundException ex) {
-	    Map<String, Object> errorDetails = new HashMap<>();
-	    errorDetails.put("timestamp", LocalDateTime.now());
-	    errorDetails.put("message", ex.getMessage());
-	    errorDetails.put("status", HttpStatus.NOT_FOUND.value());
-	    return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
-	}
-    
+    public ResponseEntity<Object> handleBookingNotFound(BookingNotFoundException ex) {
+        return new ResponseEntity<>(createErrorDetails(ex.getMessage(), HttpStatus.NOT_FOUND.value()), HttpStatus.NOT_FOUND);
+    }
+
     @ExceptionHandler(ShowtimeNotFoundException.class)
-	public ResponseEntity<Object> handleShowtimeNotFound(ShowtimeNotFoundException ex) {
-	    Map<String, Object> errorDetails = new HashMap<>();
-	    errorDetails.put("timestamp", LocalDateTime.now());
-	    errorDetails.put("message", ex.getMessage());
-	    errorDetails.put("status", HttpStatus.NOT_FOUND.value());
-	    return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
-	}
+    public ResponseEntity<Object> handleShowtimeNotFound(ShowtimeNotFoundException ex) {
+        return new ResponseEntity<>(createErrorDetails(ex.getMessage(), HttpStatus.NOT_FOUND.value()), HttpStatus.NOT_FOUND);
+    }
+
     @ExceptionHandler(MovieNotFoundException.class)
     public ResponseEntity<Object> handleMovieNotFound(MovieNotFoundException ex) {
-        Map<String, Object> errorDetails = new HashMap<>();
-        errorDetails.put("timestamp", LocalDateTime.now());
-        errorDetails.put("message", ex.getMessage());
-        errorDetails.put("status", HttpStatus.NOT_FOUND.value());
-        return new ResponseEntity<>(errorDetails, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(createErrorDetails(ex.getMessage(), HttpStatus.NOT_FOUND.value()), HttpStatus.NOT_FOUND);
     }
-    
-    @Override
-    protected ResponseEntity<Object> handleMethodArgumentNotValid(
-            MethodArgumentNotValidException ex, HttpHeaders headers, 
-            HttpStatusCode status, WebRequest request) {
-        Map<String, Object> errorDetails = new HashMap<>();
-        errorDetails.put("timestamp", LocalDateTime.now());
-        errorDetails.put("status", HttpStatus.BAD_REQUEST.value());
 
-        Map<String, String> fieldErrors = new HashMap<>();
-        ex.getBindingResult().getFieldErrors()
-                .forEach(error -> fieldErrors.put(error.getField(), error.getDefaultMessage()));
-
-        errorDetails.put("errors", fieldErrors);
-        return new ResponseEntity<>(errorDetails, HttpStatus.BAD_REQUEST);
+    @ExceptionHandler(MethodNotAllowedException.class)
+    public ResponseEntity<Object> handleMethodNotAllowed(MethodNotAllowedException ex) {
+        return new ResponseEntity<>(createErrorDetails(ex.getMessage(), HttpStatus.METHOD_NOT_ALLOWED.value()), HttpStatus.METHOD_NOT_ALLOWED);
     }
-     
+
+    @ExceptionHandler(MissingParameterException.class)
+    public ResponseEntity<Object> handleMissingParameter(MissingParameterException ex) {
+        return new ResponseEntity<>(createErrorDetails(ex.getMessage(), HttpStatus.BAD_REQUEST.value()), HttpStatus.BAD_REQUEST);
+    }
+
+
+
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Object> handleAllExceptions(Exception ex) {
+    	System.out.println("Here  hjgjhgjh" );
         Map<String, Object> errorDetails = new HashMap<>();
-        errorDetails.put("timestamp", LocalDateTime.now());
-        errorDetails.put("message", "Unexpected error occurred");
-        errorDetails.put("details", ex.getMessage());
+        errorDetails.put(TIMESTAMP, LocalDateTime.now());
+        errorDetails.put(MESSAGE, "Unexpected error occurred");
+        errorDetails.put(DETAILS, ex.getMessage());
         return new ResponseEntity<>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
     }
-  
 }

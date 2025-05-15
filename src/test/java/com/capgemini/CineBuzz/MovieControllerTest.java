@@ -32,7 +32,7 @@ class MovieControllerTest {
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
-        sampleMovie = new Movie(1L, "Inception", "Sci-Fi", 148, "English", 200.0, false, "image.jpg", "Dream invasion", "trailer.mp4");
+        sampleMovie = new Movie(1L, "Inception", "Sci-Fi", 148, "English", 200.0, false, null, "Dream invasion", "trailer.mp4");
     }
 
     @Test
