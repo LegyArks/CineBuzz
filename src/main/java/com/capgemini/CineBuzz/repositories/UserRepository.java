@@ -13,3 +13,4 @@ import com.capgemini.CineBuzz.entities.User;
 public interface UserRepository extends JpaRepository<User, Long> {
 	 Optional<User> findByEmail(String email);
 }
+
