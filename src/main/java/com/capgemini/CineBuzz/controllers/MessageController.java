@@ -3,6 +3,8 @@ package com.capgemini.CineBuzz.controllers;
 import com.capgemini.CineBuzz.entities.Message;
 import com.capgemini.CineBuzz.services.MessageService;
 
+import jakarta.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +24,7 @@ public class MessageController {
     }
 
     @PostMapping
-    public ResponseEntity<Message> createMessage(@RequestBody Message message) {
+    public ResponseEntity<Message> createMessage(@Valid @RequestBody Message message) {
 //    	Long userId = message.getUser().getId();
 //        User user = userService.getUserById(userId);
 //        message.setUser(user);

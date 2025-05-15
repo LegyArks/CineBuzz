@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import com.capgemini.CineBuzz.entities.Register;
 import com.capgemini.CineBuzz.services.RegisterService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @CrossOrigin(origins = "*")
 @RequestMapping("/api/register")
@@ -21,7 +23,7 @@ public class RegisterController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Register> addUser(@RequestBody Register register) {
+	public ResponseEntity<Register> addUser(@Valid @RequestBody Register register) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(registerService.addUser(register));
 	}
 }
