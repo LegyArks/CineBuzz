@@ -67,7 +67,7 @@ public class MovieController {
         return ResponseEntity.ok(patchedMovie);
     }
 
-    //Just a comment
+    //Just a comment to check
     @DeleteMapping("/{movieId}")
     public ResponseEntity<Void> deleteMovie(@PathVariable Long movieId) {
         boolean deleted = movieService.deleteMovie(movieId);
