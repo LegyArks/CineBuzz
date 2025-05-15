@@ -1,9 +1,11 @@
 package com.capgemini.CineBuzz;
 
 import com.capgemini.CineBuzz.entities.Movie;
+
 import com.capgemini.CineBuzz.exceptions.MovieNotFoundException;
 import com.capgemini.CineBuzz.repositories.MovieRepository;
-import com.capgemini.CineBuzz.services.MovieServiceIMPL;
+
+import com.capgemini.CineBuzz.services.MovieServiceImpl;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,7 +21,7 @@ class MovieServiceImplTest {
     private MovieRepository movieRepository;
 
     @InjectMocks
-    private MovieServiceIMPL movieService;
+    private MovieServiceImpl movieService;
 
     private Movie sampleMovie;
 
