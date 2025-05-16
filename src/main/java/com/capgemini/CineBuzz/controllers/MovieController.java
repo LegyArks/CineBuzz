@@ -28,7 +28,6 @@ public class MovieController {
     }
 
     @GetMapping
-    @PreAuthorize("hasRole('admin') or hasRole('user')")
     public ResponseEntity<List<Movie>> getAllMovies() {
         log.info("Fetching all movies");
         List<Movie> movies = movieService.getAllMovies();
@@ -37,7 +36,6 @@ public class MovieController {
     }
 
     @GetMapping("/{movieId}")
-    @PreAuthorize("hasRole('admin') or hasRole('user')")
     public ResponseEntity<Movie> getMovie(@PathVariable Long movieId) {
         log.info("Fetching movie with ID: {}", movieId);
         Movie movie = movieService.getMovieById(movieId);
@@ -51,7 +49,6 @@ public class MovieController {
     }
 
     @PostMapping
-    @PreAuthorize("hasRole('admin')")
     public ResponseEntity<Movie> createMovie(@Valid @RequestBody Movie movie , BindingResult  bindingResult) {
 		  log.info("Creating new movie: {}", movie.getTitle());
       if (bindingResult.hasErrors()) {
@@ -79,7 +76,9 @@ public class MovieController {
     }
 
     @PatchMapping("/{movieId}")
-    public ResponseEntity<Movie> patchMovie(@PathVariable Long movieId,@Valid @RequestBody Movie movie, BindingResult  bindingResult) {
+
+    public ResponseEntity<Movie> patchMovie(@PathVariable Long movieId, @RequestBody Movie movie, BindingResult  bindingResult) {
+
 		  log.info("Patching movie with ID: {}", movieId);
     if (bindingResult.hasErrors()) {
 			throw new IllegalArgumentException("Validation has failed");
@@ -90,7 +89,7 @@ public class MovieController {
         return ResponseEntity.ok(patchedMovie);
     }
 
-    @DeleteMapping("/{movieId}")
+    @DeleteMapping("/{movieId}")	
     public ResponseEntity<Void> deleteMovie(@PathVariable Long movieId) {
         log.info("Deleting movie with ID: {}", movieId);
         boolean deleted = movieService.deleteMovie(movieId);
@@ -102,4 +101,16 @@ public class MovieController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
+    
+    @GetMapping("/showtime/{showId}")
+    public ResponseEntity<Movie> getMovieByShowId(@PathVariable Long showId) {
+        log.info("Fetching movie by showId: {}", showId);
+        Movie movie = movieService.getMovieByShowId(showId);
+        if (movie != null) {
+            return ResponseEntity.ok(movie);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }
