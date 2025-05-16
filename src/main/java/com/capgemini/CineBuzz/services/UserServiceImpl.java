@@ -11,6 +11,7 @@ import com.capgemini.CineBuzz.repositories.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Slf4j
@@ -120,6 +121,18 @@ public class UserServiceImpl implements UserService {
 
 
 	@Override
+<<<<<<< HEAD
+	public boolean existsByName(String username) {
+	    log.info("Checking if username exists: {}", username);
+	    return userRepository.existsByName(username);
+	}
+
+
+	@Override
+	public boolean existsByEmail(String email) {
+	    log.info("Checking if email exists: {}", email);
+	    return userRepository.existsByEmail(email);
+=======
 	public boolean existsByEmail(String email) {
 		return userRepository.existsByEmail(email);
 	}
@@ -128,12 +141,19 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public boolean existsByName(String username) {
 		return userRepository.existsByName(username);
+>>>>>>> 3ce176ad05f6d62b9e9ada3aec6c006042a016c2
 	}
 
 
 	@Override
 	public User findByNameOrEmail(String username, String email) {
+<<<<<<< HEAD
+	    log.info("Finding user by name or email: {} or {}", username, email);
+	    return userRepository.findByNameOrEmail(username, email)
+	            .orElseThrow(() -> new UserNotFoundException("User not found with name or email: " + username + " / " + email));
+=======
 		return userRepository.findByNameOrEmail(username, email)
 				.orElseThrow(()->new UserNotFoundException("Username or Email not Found !"));
+>>>>>>> 3ce176ad05f6d62b9e9ada3aec6c006042a016c2
 	}
 }
