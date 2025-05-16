@@ -76,7 +76,7 @@ public class UserController {
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<User> patchUser(@PathVariable Long id, @Valid @RequestBody User user, BindingResult bindingResult) {
+    public ResponseEntity<User> patchUser(@PathVariable Long id, @RequestBody User user, BindingResult bindingResult) {
         log.info("Patching user with ID: {}", id);
         if (bindingResult.hasErrors()) {
             log.error("User patch failed due to validation errors: {}", bindingResult.getAllErrors());

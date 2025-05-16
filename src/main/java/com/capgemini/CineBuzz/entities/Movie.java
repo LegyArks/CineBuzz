@@ -10,6 +10,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Positive;
 
 @Entity
@@ -28,6 +29,7 @@ public class Movie {
     @Max(value = 500, message = "Duration must be realistic (max 500 mins)")
     private int duration;
     
+    @NotBlank(message = "Language is required")
     private String language;
     
     @Positive(message = "Price must be a positive value")
@@ -37,8 +39,10 @@ public class Movie {
     
     private byte[] image;  
     
+    @NotBlank(message = "Description is required")
     private String description;  
     
+    @NotBlank(message = "Trailer link is required")
     private String trailer; 
     
     @OneToMany(mappedBy = "movie")

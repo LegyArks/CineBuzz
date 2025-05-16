@@ -3325,3 +3325,819 @@ io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-05-16T07:25:59Z. Curren
 2025-05-16T14:34:39.721+05:30  INFO 16900 --- [CineBuzz] [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-05-16T14:34:39.721+05:30  INFO 16900 --- [CineBuzz] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
 2025-05-16T14:34:40.022+05:30  INFO 16900 --- [CineBuzz] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-05-16T14:34:40.119+05:30  INFO 16900 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Starting CineBuzzApplication using Java 17.0.12 with PID 16900 (C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes started by tanmay in C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz)
+2025-05-16T14:34:40.119+05:30 DEBUG 16900 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-16T14:34:40.120+05:30  INFO 16900 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-16T14:34:40.349+05:30  INFO 16900 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16T14:34:40.376+05:30  INFO 16900 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 25 ms. Found 5 JPA repository interfaces.
+2025-05-16T14:34:40.499+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-16T14:34:40.499+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-16T14:34:40.500+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-16T14:34:40.526+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-16T14:34:40.526+05:30  INFO 16900 --- [CineBuzz] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 404 ms
+2025-05-16T14:34:40.558+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16T14:34:40.562+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-16T14:34:40.578+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16T14:34:40.579+05:30  INFO 16900 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-05-16T14:34:41.400+05:30  INFO 16900 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5026e632
+2025-05-16T14:34:41.400+05:30  INFO 16900 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-05-16T14:34:41.402+05:30  WARN 16900 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16T14:34:41.402+05:30  WARN 16900 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-16T14:34:41.402+05:30  INFO 16900 --- [CineBuzz] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16T14:34:41.547+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16T14:34:41.548+05:30  INFO 16900 --- [CineBuzz] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T14:34:41.638+05:30 DEBUG 16900 --- [CineBuzz] [restartedMain] c.c.C.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-16T14:34:41.664+05:30  INFO 16900 --- [CineBuzz] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-05-16T14:34:41.665+05:30  WARN 16900 --- [CineBuzz] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-05-16T14:34:41.768+05:30  WARN 16900 --- [CineBuzz] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16T14:34:41.892+05:30  WARN 16900 --- [CineBuzz] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-16T14:34:41.952+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-16T14:34:41.963+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-16T14:34:41.966+05:30  INFO 16900 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Started CineBuzzApplication in 1.875 seconds (process running for 380.622)
+2025-05-16T14:34:41.968+05:30  INFO 16900 --- [CineBuzz] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-16T14:46:47.419+05:30  WARN 16900 --- [CineBuzz] [HikariPool-6 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Thread starvation or clock leap detected (housekeeper delta=9m35s884ms685µs200ns).
+2025-05-16T14:51:09.990+05:30  INFO 16900 --- [CineBuzz] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-16T14:51:09.994+05:30  INFO 16900 --- [CineBuzz] [Thread-23] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-16T14:51:10.247+05:30  INFO 16900 --- [CineBuzz] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-16T14:51:10.249+05:30  INFO 16900 --- [CineBuzz] [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T14:51:10.250+05:30  INFO 16900 --- [CineBuzz] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2025-05-16T14:51:10.260+05:30  INFO 16900 --- [CineBuzz] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2025-05-16T14:51:10.355+05:30  INFO 16900 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Starting CineBuzzApplication using Java 17.0.12 with PID 16900 (C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes started by tanmay in C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz)
+2025-05-16T14:51:10.356+05:30 DEBUG 16900 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-16T14:51:10.356+05:30  INFO 16900 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-16T14:51:10.552+05:30  INFO 16900 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16T14:51:10.587+05:30  INFO 16900 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 5 JPA repository interfaces.
+2025-05-16T14:51:10.715+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-16T14:51:10.716+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-16T14:51:10.716+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-16T14:51:10.736+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-16T14:51:10.736+05:30  INFO 16900 --- [CineBuzz] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 378 ms
+2025-05-16T14:51:10.771+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16T14:51:10.775+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-16T14:51:10.784+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16T14:51:10.785+05:30  INFO 16900 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2025-05-16T14:51:13.302+05:30  INFO 16900 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@197f3cbf
+2025-05-16T14:51:13.302+05:30  INFO 16900 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2025-05-16T14:51:13.304+05:30  WARN 16900 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16T14:51:13.304+05:30  WARN 16900 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-16T14:51:13.304+05:30  INFO 16900 --- [CineBuzz] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16T14:51:13.407+05:30 ERROR 16900 --- [CineBuzz] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.InstantiationException: Could not instantiate entity 'com.capgemini.CineBuzz.entities.Movie' due to: null
+2025-05-16T14:51:13.408+05:30 ERROR 16900 --- [CineBuzz] [restartedMain] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes\com\capgemini\CineBuzz\security\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'customUserDetailsService' defined in file [C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes\com\capgemini\CineBuzz\security\CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.capgemini.CineBuzz.repositories.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2025-05-16T14:51:13.411+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-05-16T14:51:13.413+05:30  WARN 16900 --- [CineBuzz] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-7 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:842)
+2025-05-16T14:51:13.416+05:30  WARN 16900 --- [CineBuzz] [restartedMain] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [HikariPool-7 connection adder] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.12/sun.nio.ch.Net.connect0(Native Method)
+ java.base@17.0.12/sun.nio.ch.Net.connect(Net.java:579)
+ java.base@17.0.12/sun.nio.ch.Net.connect(Net.java:568)
+ java.base@17.0.12/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:593)
+ java.base@17.0.12/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+ java.base@17.0.12/java.net.Socket.connect(Socket.java:633)
+ app//com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
+ app//com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
+ app//com.mysql.cj.NativeSession.connect(NativeSession.java:142)
+ app//com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:961)
+ app//com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+ app//com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:420)
+ app//com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:238)
+ app//com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180)
+ app//com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137)
+ app//com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360)
+ app//com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202)
+ app//com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461)
+ app//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:724)
+ app//com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:703)
+ java.base@17.0.12/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+ java.base@17.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.12/java.lang.Thread.run(Thread.java:842)
+2025-05-16T14:51:13.417+05:30  WARN 16900 --- [CineBuzz] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-05-16T14:51:13.417+05:30  INFO 16900 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2025-05-16T14:51:18.598+05:30  INFO 16900 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2025-05-16T14:51:18.606+05:30  INFO 16900 --- [CineBuzz] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-16T14:51:18.655+05:30 ERROR 16900 --- [CineBuzz] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:170) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
+	at com.capgemini.CineBuzz.CineBuzzApplication.main(CineBuzzApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.5.jar:3.4.5]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-3.4.5.jar:3.4.5]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes\com\capgemini\CineBuzz\security\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'customUserDetailsService' defined in file [C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes\com\capgemini\CineBuzz\security\CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.capgemini.CineBuzz.repositories.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:174) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:169) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:154) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:271) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:245) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4464) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:438) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.4.5.jar:3.4.5]
+	... 18 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'customUserDetailsService' defined in file [C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes\com\capgemini\CineBuzz\security\CustomUserDetailsService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.capgemini.CineBuzz.repositories.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1739) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 59 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in com.capgemini.CineBuzz.repositories.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1717) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1466) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1681) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1627) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 73 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:513) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1367) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1197) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 86 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.InstantiationException: Could not instantiate entity 'com.capgemini.CineBuzz.entities.Movie' due to: null
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1818) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 98 common frames omitted
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.InstantiationException: Could not instantiate entity 'com.capgemini.CineBuzz.entities.Movie' due to: null
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431) ~[spring-orm-6.2.6.jar:6.2.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.6.jar:6.2.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1865) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1814) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 105 common frames omitted
+Caused by: org.hibernate.InstantiationException: Could not instantiate entity 'com.capgemini.CineBuzz.entities.Movie' due to: null
+	at org.hibernate.metamodel.internal.EntityInstantiatorPojoStandard.instantiate(EntityInstantiatorPojoStandard.java:100) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.lambda$prepareMappingModel$14(AbstractEntityPersister.java:5343) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.internal.util.LazyValue.getValue(LazyValue.java:30) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.engine.internal.UnsavedValueFactory.getUnsavedIdentifierValue(UnsavedValueFactory.java:49) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.metamodel.mapping.internal.BasicEntityIdentifierMappingImpl.<init>(BasicEntityIdentifierMappingImpl.java:119) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.generateIdentifierMapping(AbstractEntityPersister.java:5712) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.lambda$prepareMappingModel$15(AbstractEntityPersister.java:5348) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.metamodel.mapping.internal.MappingModelCreationProcess.processSubPart(MappingModelCreationProcess.java:163) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.prepareMappingModel(AbstractEntityPersister.java:5346) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.prepareMappingModel(AbstractEntityPersister.java:5192) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.metamodel.mapping.internal.MappingModelCreationProcess.execute(MappingModelCreationProcess.java:84) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.metamodel.mapping.internal.MappingModelCreationProcess.process(MappingModelCreationProcess.java:42) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.finishInitialization(MappingMetamodelImpl.java:200) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.internal.SessionFactoryImpl.initializeMappingModel(SessionFactoryImpl.java:373) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:302) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1517) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.6.jar:6.2.6]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.6.jar:6.2.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.6.jar:6.2.6]
+	... 109 common frames omitted
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.hibernate.metamodel.internal.EntityInstantiatorPojoStandard.instantiate(EntityInstantiatorPojoStandard.java:97) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	... 128 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	NotBlank cannot be resolved to a type
+
+	at com.capgemini.CineBuzz.entities.Movie.<init>(Movie.java:31) ~[classes/:na]
+	... 134 common frames omitted
+
+2025-05-16T14:51:20.203+05:30  INFO 16900 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Starting CineBuzzApplication using Java 17.0.12 with PID 16900 (C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes started by tanmay in C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz)
+2025-05-16T14:51:20.203+05:30 DEBUG 16900 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-16T14:51:20.204+05:30  INFO 16900 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-16T14:51:20.418+05:30  INFO 16900 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16T14:51:20.438+05:30  INFO 16900 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 5 JPA repository interfaces.
+2025-05-16T14:51:20.571+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-16T14:51:20.572+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-16T14:51:20.573+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-16T14:51:20.592+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-05-16T14:51:20.592+05:30  INFO 16900 --- [CineBuzz] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 385 ms
+2025-05-16T14:51:20.639+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16T14:51:20.642+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-16T14:51:20.653+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16T14:51:20.654+05:30  INFO 16900 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2025-05-16T14:51:22.682+05:30  INFO 16900 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7a8b79b
+2025-05-16T14:51:22.683+05:30  INFO 16900 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2025-05-16T14:51:22.685+05:30  WARN 16900 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16T14:51:22.685+05:30  WARN 16900 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-16T14:51:22.686+05:30  INFO 16900 --- [CineBuzz] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-8)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16T14:51:22.812+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16T14:51:22.812+05:30  INFO 16900 --- [CineBuzz] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T14:51:22.877+05:30 DEBUG 16900 --- [CineBuzz] [restartedMain] c.c.C.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-16T14:51:22.893+05:30  INFO 16900 --- [CineBuzz] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-05-16T14:51:22.893+05:30  WARN 16900 --- [CineBuzz] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-05-16T14:51:22.978+05:30  WARN 16900 --- [CineBuzz] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16T14:51:23.090+05:30  WARN 16900 --- [CineBuzz] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-16T14:51:23.136+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-16T14:51:23.150+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-16T14:51:23.153+05:30  INFO 16900 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Started CineBuzzApplication in 2.994 seconds (process running for 1381.809)
+2025-05-16T14:51:23.155+05:30  INFO 16900 --- [CineBuzz] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-16T14:51:27.685+05:30  INFO 16900 --- [CineBuzz] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-16T14:51:27.687+05:30  INFO 16900 --- [CineBuzz] [Thread-27] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-16T14:51:27.969+05:30  INFO 16900 --- [CineBuzz] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-16T14:51:27.972+05:30  INFO 16900 --- [CineBuzz] [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T14:51:27.973+05:30  INFO 16900 --- [CineBuzz] [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2025-05-16T14:51:32.949+05:30  INFO 16900 --- [CineBuzz] [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2025-05-16T14:51:33.063+05:30  INFO 16900 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Starting CineBuzzApplication using Java 17.0.12 with PID 16900 (C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes started by tanmay in C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz)
+2025-05-16T14:51:33.063+05:30 DEBUG 16900 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-16T14:51:33.063+05:30  INFO 16900 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-16T14:51:33.246+05:30  INFO 16900 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16T14:51:33.265+05:30  INFO 16900 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 5 JPA repository interfaces.
+2025-05-16T14:51:33.378+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-16T14:51:33.379+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-16T14:51:33.380+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-16T14:51:33.405+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-05-16T14:51:33.405+05:30  INFO 16900 --- [CineBuzz] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 340 ms
+2025-05-16T14:51:33.446+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16T14:51:33.449+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-16T14:51:33.457+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16T14:51:33.460+05:30  INFO 16900 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2025-05-16T14:51:38.515+05:30  INFO 16900 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@76c1b6ba
+2025-05-16T14:51:38.515+05:30  INFO 16900 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2025-05-16T14:51:38.517+05:30  WARN 16900 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16T14:51:38.517+05:30  WARN 16900 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-16T14:51:38.517+05:30  INFO 16900 --- [CineBuzz] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-9)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16T14:51:38.638+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16T14:51:38.638+05:30  INFO 16900 --- [CineBuzz] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T14:51:38.703+05:30 DEBUG 16900 --- [CineBuzz] [restartedMain] c.c.C.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-16T14:51:38.724+05:30  INFO 16900 --- [CineBuzz] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-05-16T14:51:38.725+05:30  WARN 16900 --- [CineBuzz] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-05-16T14:51:38.816+05:30  WARN 16900 --- [CineBuzz] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16T14:51:38.920+05:30  WARN 16900 --- [CineBuzz] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-16T14:51:38.967+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-16T14:51:38.979+05:30  INFO 16900 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-16T14:51:38.984+05:30  INFO 16900 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Started CineBuzzApplication in 5.949 seconds (process running for 1397.639)
+2025-05-16T14:51:38.985+05:30  INFO 16900 --- [CineBuzz] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-16T14:51:46.092+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-16T14:51:46.093+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-16T14:51:46.095+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-16T14:51:46.097+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:51:46.097+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:51:46.101+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Username from token : Tanmay
+2025-05-16T14:51:46.154+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Filter validated successfully
+2025-05-16T14:51:46.157+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.controllers.MovieController        : Fetching movie by showId: 17
+2025-05-16T14:51:46.158+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-2] c.c.CineBuzz.services.MovieServiceImpl   : Get movie Using showId with ID: 17
+2025-05-16T14:51:46.213+05:30  WARN 16900 --- [CineBuzz] [http-nio-8080-exec-2] c.c.CineBuzz.services.MovieServiceImpl   : ShowId not found with ID: 17
+2025-05-16T14:51:51.083+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:51:51.084+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:51:51.087+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Username from token : Tanmay
+2025-05-16T14:51:51.119+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Filter validated successfully
+2025-05-16T14:51:51.121+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.controllers.MovieController        : Fetching movie by showId: 17
+2025-05-16T14:51:51.121+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-3] c.c.CineBuzz.services.MovieServiceImpl   : Get movie Using showId with ID: 17
+2025-05-16T14:51:51.162+05:30  WARN 16900 --- [CineBuzz] [http-nio-8080-exec-3] c.c.CineBuzz.services.MovieServiceImpl   : ShowId not found with ID: 17
+2025-05-16T14:52:28.400+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-4] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-16T14:52:40.316+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:52:40.316+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:52:40.320+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Username from token : Tanmay
+2025-05-16T14:52:40.357+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Filter validated successfully
+2025-05-16T14:52:40.357+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.controllers.ShowtimeController     : Fetching all showtimes
+2025-05-16T14:52:40.359+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.services.ShowtimeServiceImpl       : Fetching all showtimes
+2025-05-16T14:52:40.466+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.controllers.ShowtimeController     : Fetched 2 showtimes
+2025-05-16T14:52:43.477+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:52:43.477+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:52:43.479+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.security.JwtAuthenticationFilter   : Username from token : Tanmay
+2025-05-16T14:52:43.505+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.security.JwtAuthenticationFilter   : Filter validated successfully
+2025-05-16T14:52:43.507+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.controllers.ShowtimeController     : Fetching all showtimes
+2025-05-16T14:52:43.507+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.services.ShowtimeServiceImpl       : Fetching all showtimes
+2025-05-16T14:52:43.587+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.controllers.ShowtimeController     : Fetched 2 showtimes
+2025-05-16T14:53:45.650+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-9] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:53:45.650+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-9] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:53:45.654+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-9] c.c.C.security.JwtAuthenticationFilter   : Username from token : Tanmay
+2025-05-16T14:53:45.691+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-9] c.c.C.security.JwtAuthenticationFilter   : Filter validated successfully
+2025-05-16T14:53:45.691+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-9] c.c.C.controllers.ShowtimeController     : Fetching all showtimes
+2025-05-16T14:53:45.691+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-9] c.c.C.services.ShowtimeServiceImpl       : Fetching all showtimes
+2025-05-16T14:53:45.773+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-9] c.c.C.controllers.ShowtimeController     : Fetched 2 showtimes
+2025-05-16T14:53:53.330+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-10] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:53:53.330+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-10] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:53:53.331+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-10] c.c.C.security.JwtAuthenticationFilter   : Username from token : Tanmay
+2025-05-16T14:53:53.364+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-10] c.c.C.security.JwtAuthenticationFilter   : Filter validated successfully
+2025-05-16T14:53:53.369+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-10] c.c.C.controllers.ShowtimeController     : Fetching all showtimes
+2025-05-16T14:53:53.369+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-10] c.c.C.services.ShowtimeServiceImpl       : Fetching all showtimes
+2025-05-16T14:53:53.437+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-10] c.c.C.controllers.ShowtimeController     : Fetched 2 showtimes
+2025-05-16T14:54:03.042+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:54:03.050+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:54:03.051+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.security.JwtAuthenticationFilter   : Username from token : Tanmay
+2025-05-16T14:54:03.074+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.security.JwtAuthenticationFilter   : Filter validated successfully
+2025-05-16T14:54:03.099+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.controllers.ShowtimeController     : Creating new showtime for movie ID: 32
+2025-05-16T14:54:03.102+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.services.ShowtimeServiceImpl       : Creating new showtime for movie ID: 32
+2025-05-16T14:54:03.148+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.controllers.ShowtimeController     : Showtime created successfully with ID: 21
+2025-05-16T14:54:46.603+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:54:46.603+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:54:46.608+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Username from token : Tanmay
+2025-05-16T14:54:46.634+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Filter validated successfully
+2025-05-16T14:54:46.637+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.controllers.MovieController        : Fetching movie by showId: 17
+2025-05-16T14:54:46.639+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-2] c.c.CineBuzz.services.MovieServiceImpl   : Get movie Using showId with ID: 17
+2025-05-16T14:54:46.691+05:30  WARN 16900 --- [CineBuzz] [http-nio-8080-exec-2] c.c.CineBuzz.services.MovieServiceImpl   : ShowId not found with ID: 17
+2025-05-16T14:54:56.220+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:54:56.220+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:54:56.226+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Username from token : Tanmay
+2025-05-16T14:54:56.452+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Filter validated successfully
+2025-05-16T14:54:56.454+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.controllers.MovieController        : Fetching movie by showId: 21
+2025-05-16T14:54:56.456+05:30  INFO 16900 --- [CineBuzz] [http-nio-8080-exec-3] c.c.CineBuzz.services.MovieServiceImpl   : Get movie Using showId with ID: 21
+2025-05-16T14:54:56.502+05:30  WARN 16900 --- [CineBuzz] [http-nio-8080-exec-3] c.c.CineBuzz.services.MovieServiceImpl   : ShowId not found with ID: 21
+2025-05-16T14:55:28.136+05:30  INFO 7404 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Starting CineBuzzApplication using Java 17.0.12 with PID 7404 (C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes started by tanmay in C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz)
+2025-05-16T14:55:28.141+05:30 DEBUG 7404 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-16T14:55:28.143+05:30  INFO 7404 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-16T14:55:28.246+05:30  INFO 7404 --- [CineBuzz] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-16T14:55:28.247+05:30  INFO 7404 --- [CineBuzz] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-16T14:55:29.483+05:30  INFO 7404 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16T14:55:29.636+05:30  INFO 7404 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 130 ms. Found 5 JPA repository interfaces.
+2025-05-16T14:55:30.836+05:30  INFO 7404 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-16T14:55:30.858+05:30  INFO 7404 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-16T14:55:30.859+05:30  INFO 7404 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-16T14:55:30.921+05:30  INFO 7404 --- [CineBuzz] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-16T14:55:30.921+05:30  INFO 7404 --- [CineBuzz] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2673 ms
+2025-05-16T14:55:31.176+05:30  INFO 7404 --- [CineBuzz] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16T14:55:31.249+05:30  INFO 7404 --- [CineBuzz] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-16T14:55:31.314+05:30  INFO 7404 --- [CineBuzz] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-16T14:55:31.790+05:30  INFO 7404 --- [CineBuzz] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16T14:55:31.848+05:30  INFO 7404 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-16T14:55:34.580+05:30  INFO 7404 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b71eec8
+2025-05-16T14:55:34.586+05:30  INFO 7404 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-16T14:55:34.690+05:30  WARN 7404 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16T14:55:34.691+05:30  WARN 7404 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-16T14:55:34.729+05:30  INFO 7404 --- [CineBuzz] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16T14:55:35.989+05:30  INFO 7404 --- [CineBuzz] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16T14:55:35.995+05:30  INFO 7404 --- [CineBuzz] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T14:55:36.504+05:30 DEBUG 7404 --- [CineBuzz] [restartedMain] c.c.C.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-16T14:55:36.621+05:30  INFO 7404 --- [CineBuzz] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-05-16T14:55:36.622+05:30  WARN 7404 --- [CineBuzz] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-05-16T14:55:36.861+05:30  WARN 7404 --- [CineBuzz] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16T14:55:37.552+05:30  WARN 7404 --- [CineBuzz] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-16T14:55:37.840+05:30  WARN 7404 --- [CineBuzz] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-16T14:55:37.880+05:30  WARN 7404 --- [CineBuzz] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-05-16T14:55:37.884+05:30  INFO 7404 --- [CineBuzz] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T14:55:37.889+05:30  INFO 7404 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-16T14:55:39.809+05:30  INFO 7404 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-16T14:55:39.856+05:30  INFO 7404 --- [CineBuzz] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-16T14:55:39.879+05:30 ERROR 7404 --- [CineBuzz] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-05-16T14:55:50.420+05:30  INFO 1832 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Starting CineBuzzApplication using Java 17.0.12 with PID 1832 (C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes started by tanmay in C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz)
+2025-05-16T14:55:50.424+05:30 DEBUG 1832 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-16T14:55:50.425+05:30  INFO 1832 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-16T14:55:50.507+05:30  INFO 1832 --- [CineBuzz] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-16T14:55:50.507+05:30  INFO 1832 --- [CineBuzz] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-16T14:55:51.755+05:30  INFO 1832 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16T14:55:51.883+05:30  INFO 1832 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 5 JPA repository interfaces.
+2025-05-16T14:55:53.068+05:30  INFO 1832 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-16T14:55:53.088+05:30  INFO 1832 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-16T14:55:53.089+05:30  INFO 1832 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-16T14:55:53.171+05:30  INFO 1832 --- [CineBuzz] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-16T14:55:53.171+05:30  INFO 1832 --- [CineBuzz] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2663 ms
+2025-05-16T14:55:53.414+05:30  INFO 1832 --- [CineBuzz] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16T14:55:53.499+05:30  INFO 1832 --- [CineBuzz] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-16T14:55:53.562+05:30  INFO 1832 --- [CineBuzz] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-16T14:55:54.032+05:30  INFO 1832 --- [CineBuzz] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16T14:55:54.091+05:30  INFO 1832 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-16T14:55:56.787+05:30  INFO 1832 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@397e695
+2025-05-16T14:55:56.794+05:30  INFO 1832 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-16T14:55:56.900+05:30  WARN 1832 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16T14:55:56.902+05:30  WARN 1832 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-16T14:55:56.931+05:30  INFO 1832 --- [CineBuzz] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16T14:55:58.147+05:30  INFO 1832 --- [CineBuzz] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16T14:55:58.152+05:30  INFO 1832 --- [CineBuzz] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T14:55:58.683+05:30 DEBUG 1832 --- [CineBuzz] [restartedMain] c.c.C.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-16T14:55:58.795+05:30  INFO 1832 --- [CineBuzz] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-05-16T14:55:58.796+05:30  WARN 1832 --- [CineBuzz] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-05-16T14:55:58.994+05:30  WARN 1832 --- [CineBuzz] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16T14:55:59.731+05:30  WARN 1832 --- [CineBuzz] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-16T14:56:00.007+05:30  INFO 1832 --- [CineBuzz] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-16T14:56:00.086+05:30  INFO 1832 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-16T14:56:00.105+05:30  INFO 1832 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Started CineBuzzApplication in 10.355 seconds (process running for 10.844)
+2025-05-16T14:56:11.677+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-16T14:56:11.677+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-16T14:56:11.680+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-05-16T14:56:11.722+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:56:11.723+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:56:11.820+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.security.JwtAuthenticationFilter   : Username from token : Tanmay
+2025-05-16T14:56:12.139+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.security.JwtAuthenticationFilter   : Filter validated successfully
+2025-05-16T14:56:12.170+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.controllers.MovieController        : Fetching movie by showId: 21
+2025-05-16T14:56:12.171+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-1] c.c.CineBuzz.services.MovieServiceImpl   : Get movie Using showId with ID: 21
+2025-05-16T14:56:12.263+05:30  WARN 1832 --- [CineBuzz] [http-nio-8080-exec-1] c.c.CineBuzz.services.MovieServiceImpl   : ShowId not found with ID: 21
+2025-05-16T14:56:29.846+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:56:29.846+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:56:29.854+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Username from token : Tanmay
+2025-05-16T14:56:29.878+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Filter validated successfully
+2025-05-16T14:56:29.936+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.controllers.MovieController        : Creating new movie: MobLand
+2025-05-16T14:56:29.936+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-3] c.c.CineBuzz.services.MovieServiceImpl   : Creating new movie: MobLand
+2025-05-16T14:56:30.043+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.controllers.MovieController        : Movie created successfully with ID: 34
+2025-05-16T14:58:25.199+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:58:25.199+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T14:58:25.205+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Username from token : Tanmay
+2025-05-16T14:58:25.268+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Filter validated successfully
+2025-05-16T14:58:25.273+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.controllers.MovieController        : Creating new movie: Batman
+2025-05-16T14:58:25.273+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-5] c.c.CineBuzz.services.MovieServiceImpl   : Creating new movie: Batman
+2025-05-16T14:58:25.319+05:30  INFO 1832 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.controllers.MovieController        : Movie created successfully with ID: 35
+2025-05-16T14:59:46.085+05:30  INFO 13204 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Starting CineBuzzApplication using Java 17.0.12 with PID 13204 (C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes started by tanmay in C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz)
+2025-05-16T14:59:46.091+05:30 DEBUG 13204 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-16T14:59:46.092+05:30  INFO 13204 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-16T14:59:46.177+05:30  INFO 13204 --- [CineBuzz] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-16T14:59:46.178+05:30  INFO 13204 --- [CineBuzz] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-16T14:59:47.480+05:30  INFO 13204 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16T14:59:47.601+05:30  INFO 13204 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 5 JPA repository interfaces.
+2025-05-16T14:59:48.795+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-16T14:59:48.822+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-16T14:59:48.822+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-16T14:59:48.905+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-16T14:59:48.905+05:30  INFO 13204 --- [CineBuzz] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2727 ms
+2025-05-16T14:59:49.138+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16T14:59:49.229+05:30  INFO 13204 --- [CineBuzz] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-16T14:59:49.277+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-16T14:59:49.731+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16T14:59:49.784+05:30  INFO 13204 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-16T14:59:52.398+05:30  INFO 13204 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1312d9a7
+2025-05-16T14:59:52.404+05:30  INFO 13204 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-16T14:59:52.495+05:30  WARN 13204 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16T14:59:52.497+05:30  WARN 13204 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-16T14:59:52.531+05:30  INFO 13204 --- [CineBuzz] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16T14:59:53.925+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16T14:59:53.929+05:30  INFO 13204 --- [CineBuzz] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T14:59:54.466+05:30 DEBUG 13204 --- [CineBuzz] [restartedMain] c.c.C.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-16T14:59:54.571+05:30  INFO 13204 --- [CineBuzz] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-05-16T14:59:54.572+05:30  WARN 13204 --- [CineBuzz] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-05-16T14:59:54.810+05:30  WARN 13204 --- [CineBuzz] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16T14:59:55.564+05:30  WARN 13204 --- [CineBuzz] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-16T14:59:55.840+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-16T14:59:55.900+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-16T14:59:55.924+05:30  INFO 13204 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Started CineBuzzApplication in 10.497 seconds (process running for 10.994)
+2025-05-16T15:00:31.691+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-16T15:00:31.691+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-16T15:00:31.691+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-05-16T15:00:31.722+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-16T15:00:40.842+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM3NjI2MywiZXhwIjoxNzQ3Mzc5ODYzfQ.ls0JMLGf7jPUedrpOxekKCMLOak_xM44VFDoNWoN8eI
+2025-05-16T15:00:40.842+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM3NjI2MywiZXhwIjoxNzQ3Mzc5ODYzfQ.ls0JMLGf7jPUedrpOxekKCMLOak_xM44VFDoNWoN8eI
+2025-05-16T15:00:40.909+05:30 ERROR 13204 --- [CineBuzz] [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-05-16T07:17:43Z. Current time: 2025-05-16T09:30:40Z, a difference of 7977907 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:427) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at com.capgemini.CineBuzz.security.JwtUtils.extractAllClaims(JwtUtils.java:35) ~[classes/:na]
+	at com.capgemini.CineBuzz.security.JwtUtils.extractClaim(JwtUtils.java:30) ~[classes/:na]
+	at com.capgemini.CineBuzz.security.JwtUtils.extractUsername(JwtUtils.java:22) ~[classes/:na]
+	at com.capgemini.CineBuzz.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:43) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238) ~[spring-security-config-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2025-05-16T15:01:11.967+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-4] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4MDUyMSwiZXhwIjoxNzQ3Mzg0MTIxfQ.Cjg9LnBHmHmMJaq_c1qRZzJPPnrZtzi3tiS6mLILBYg
+2025-05-16T15:01:11.967+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-4] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4MDUyMSwiZXhwIjoxNzQ3Mzg0MTIxfQ.Cjg9LnBHmHmMJaq_c1qRZzJPPnrZtzi3tiS6mLILBYg
+2025-05-16T15:01:11.977+05:30 ERROR 13204 --- [CineBuzz] [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2025-05-16T08:28:41Z. Current time: 2025-05-16T09:31:11Z, a difference of 3750975 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:427) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:529) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:589) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173) ~[jjwt-impl-0.11.5.jar:0.11.5]
+	at com.capgemini.CineBuzz.security.JwtUtils.extractAllClaims(JwtUtils.java:35) ~[classes/:na]
+	at com.capgemini.CineBuzz.security.JwtUtils.extractClaim(JwtUtils.java:30) ~[classes/:na]
+	at com.capgemini.CineBuzz.security.JwtUtils.extractUsername(JwtUtils.java:22) ~[classes/:na]
+	at com.capgemini.CineBuzz.security.JwtAuthenticationFilter.doFilterInternal(JwtAuthenticationFilter.java:43) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191) ~[spring-security-web-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:243) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:238) ~[spring-security-config-6.4.5.jar:6.4.5]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:362) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:278) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.lang.Thread.run(Thread.java:842) ~[na:na]
+
+2025-05-16T15:01:23.069+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-16T15:01:23.598+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-5] c.c.CineBuzz.services.UserServiceImpl    : Finding user by name or email: Tanmay or Tanmay
+2025-05-16T15:01:43.903+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4Nzg4MywiZXhwIjoxNzQ3MzkxNDgzfQ.1t7UTh-_755iXa1C8onplzsg11NQvz--FepdojkbHbw
+2025-05-16T15:01:43.903+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4Nzg4MywiZXhwIjoxNzQ3MzkxNDgzfQ.1t7UTh-_755iXa1C8onplzsg11NQvz--FepdojkbHbw
+2025-05-16T15:01:43.910+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.security.JwtAuthenticationFilter   : Username from token : Tanmay
+2025-05-16T15:01:43.966+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.security.JwtAuthenticationFilter   : Filter validated successfully
+2025-05-16T15:01:43.968+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.controllers.ShowtimeController     : Fetching all showtimes
+2025-05-16T15:01:43.968+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.services.ShowtimeServiceImpl       : Fetching all showtimes
+2025-05-16T15:01:44.066+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.controllers.ShowtimeController     : Fetched 3 showtimes
+2025-05-16T15:02:02.063+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-7] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4Nzg4MywiZXhwIjoxNzQ3MzkxNDgzfQ.1t7UTh-_755iXa1C8onplzsg11NQvz--FepdojkbHbw
+2025-05-16T15:02:02.063+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-7] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4Nzg4MywiZXhwIjoxNzQ3MzkxNDgzfQ.1t7UTh-_755iXa1C8onplzsg11NQvz--FepdojkbHbw
+2025-05-16T15:02:02.063+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-7] c.c.C.security.JwtAuthenticationFilter   : Username from token : Tanmay
+2025-05-16T15:02:02.147+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-7] c.c.C.security.JwtAuthenticationFilter   : Filter validated successfully
+2025-05-16T15:02:02.147+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-7] c.c.C.controllers.MovieController        : Fetching all movies
+2025-05-16T15:02:02.147+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-7] c.c.CineBuzz.services.MovieServiceImpl   : Getting All Movies
+2025-05-16T15:02:02.212+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-7] c.c.C.controllers.MovieController        : Fetched movies count: 7
+2025-05-16T15:02:31.774+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-8] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : Bearer eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T15:02:31.774+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-8] c.c.C.security.JwtAuthenticationFilter   : Token : eyJhbGciOiJIUzI1NiJ9.eyJuYW1lIjoiVGFubWF5IiwidXNlcnR5cGUiOiJhZG1pbiIsInVzZXJpZCI6MjQsImVtYWlsIjoiVGFubWF5QGdtYWlsLmNvbSIsInN1YiI6IlRhbm1heSIsImlhdCI6MTc0NzM4NTk1OSwiZXhwIjoxNzQ3Mzg5NTU5fQ.JkFNXQ2plYnDWpo-x50xgU24pN21--6kLEeloSfP5lI
+2025-05-16T15:02:31.778+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-8] c.c.C.security.JwtAuthenticationFilter   : Username from token : Tanmay
+2025-05-16T15:02:31.814+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-8] c.c.C.security.JwtAuthenticationFilter   : Filter validated successfully
+2025-05-16T15:02:31.856+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-8] c.c.C.controllers.ShowtimeController     : Creating new showtime for movie ID: 35
+2025-05-16T15:02:31.856+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-8] c.c.C.services.ShowtimeServiceImpl       : Creating new showtime for movie ID: 35
+2025-05-16T15:02:31.944+05:30  INFO 13204 --- [CineBuzz] [http-nio-8080-exec-8] c.c.C.controllers.ShowtimeController     : Showtime created successfully with ID: 22
+2025-05-16T15:03:43.786+05:30  INFO 13204 --- [CineBuzz] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 10 class path changes (3 additions, 0 deletions, 7 modifications)
+2025-05-16T15:03:43.792+05:30  INFO 13204 --- [CineBuzz] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-16T15:03:44.053+05:30  INFO 13204 --- [CineBuzz] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-16T15:03:44.060+05:30  INFO 13204 --- [CineBuzz] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T15:03:44.065+05:30  INFO 13204 --- [CineBuzz] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-16T15:03:44.155+05:30  INFO 13204 --- [CineBuzz] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-16T15:03:44.263+05:30  INFO 13204 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Starting CineBuzzApplication using Java 17.0.12 with PID 13204 (C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes started by tanmay in C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz)
+2025-05-16T15:03:44.263+05:30 DEBUG 13204 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-16T15:03:44.263+05:30  INFO 13204 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-16T15:03:44.639+05:30  INFO 13204 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16T15:03:44.709+05:30  INFO 13204 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 5 JPA repository interfaces.
+2025-05-16T15:03:44.908+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-16T15:03:44.910+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-16T15:03:44.910+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-16T15:03:44.970+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-16T15:03:44.970+05:30  INFO 13204 --- [CineBuzz] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 704 ms
+2025-05-16T15:03:45.074+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16T15:03:45.082+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-16T15:03:45.104+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16T15:03:45.106+05:30  INFO 13204 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-05-16T15:03:47.596+05:30  INFO 13204 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4eff3e0b
+2025-05-16T15:03:47.597+05:30  INFO 13204 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-05-16T15:03:47.599+05:30  WARN 13204 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16T15:03:47.599+05:30  WARN 13204 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-16T15:03:47.600+05:30  INFO 13204 --- [CineBuzz] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16T15:03:47.793+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16T15:03:47.794+05:30  INFO 13204 --- [CineBuzz] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T15:03:47.881+05:30 DEBUG 13204 --- [CineBuzz] [restartedMain] c.c.C.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-16T15:03:47.946+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-16T15:03:48.846+05:30  INFO 13204 --- [CineBuzz] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-05-16T15:03:48.847+05:30  WARN 13204 --- [CineBuzz] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-05-16T15:03:48.960+05:30  WARN 13204 --- [CineBuzz] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16T15:03:49.175+05:30  WARN 13204 --- [CineBuzz] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-16T15:03:49.230+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-16T15:03:49.249+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-16T15:03:49.254+05:30  INFO 13204 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Started CineBuzzApplication in 5.049 seconds (process running for 244.325)
+2025-05-16T15:03:49.258+05:30  INFO 13204 --- [CineBuzz] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-16T15:07:10.106+05:30  INFO 13204 --- [CineBuzz] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 1 deletion, 3 modifications)
+2025-05-16T15:07:10.110+05:30  INFO 13204 --- [CineBuzz] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-16T15:07:10.326+05:30  INFO 13204 --- [CineBuzz] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-16T15:07:10.331+05:30  INFO 13204 --- [CineBuzz] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T15:07:10.332+05:30  INFO 13204 --- [CineBuzz] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-05-16T15:07:10.619+05:30  INFO 13204 --- [CineBuzz] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
