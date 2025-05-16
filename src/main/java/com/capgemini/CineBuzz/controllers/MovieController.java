@@ -8,6 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import com.capgemini.CineBuzz.entities.Movie;
+import com.capgemini.CineBuzz.entities.Showtime;
 import com.capgemini.CineBuzz.services.MovieService;
 
 import jakarta.validation.Valid;
@@ -102,15 +103,7 @@ public class MovieController {
         }
     }
     
-    @GetMapping("/showtime/{showId}")
-    public ResponseEntity<Movie> getMovieByShowId(@PathVariable Long showId) {
-        log.info("Fetching movie by showId: {}", showId);
-        Movie movie = movieService.getMovieByShowId(showId);
-        if (movie != null) {
-            return ResponseEntity.ok(movie);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }
+  
 
+  
 }

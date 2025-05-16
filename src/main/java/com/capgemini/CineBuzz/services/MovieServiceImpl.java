@@ -9,6 +9,7 @@ import com.capgemini.CineBuzz.exceptions.MovieNotFoundException;
 import com.capgemini.CineBuzz.repositories.MovieRepository;
 import com.capgemini.CineBuzz.repositories.ShowtimeRepository;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
@@ -124,12 +125,8 @@ public class MovieServiceImpl implements MovieService {
 		return true;
 	}
 	
-	public Movie getMovieByShowId(Long showId) {
-		log.info("Get movie Using showId with ID: {}", showId);
-	    Showtime showtime = showtimeRepository.findById(showId).orElse(null);
-	    
-	    log.warn("ShowId not found with ID: {}", showId);
-	    return (showtime != null) ? showtime.getMovie() : null;
-	}
+	
 
+	
+	
 }
