@@ -18,13 +18,18 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest
 public class ShowtimeIntegrationTest {
 
-    @Autowired
     private ShowtimeService showtimeService;
 
-    @Autowired
     private MovieRepository movieRepository;
+    
+    @Autowired
+    public ShowtimeIntegrationTest(ShowtimeService showtimeService, MovieRepository movieRepository) {
 
-    private Movie movie;
+		this.showtimeService = showtimeService;
+		this.movieRepository = movieRepository;
+	}
+
+	private Movie movie;
 
     @BeforeEach
     void setup() {

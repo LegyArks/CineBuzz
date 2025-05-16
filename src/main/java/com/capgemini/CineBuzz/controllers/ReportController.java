@@ -18,10 +18,15 @@ import java.util.*;
 @RequestMapping("/api/reports")
 public class ReportController {
 
-    @Autowired
     private BookingRepository bookingRepo;
+    
+    @Autowired
+    public ReportController(BookingRepository bookingRepo) {
+		super();
+		this.bookingRepo = bookingRepo;
+	}
 
-    @PreAuthorize("hasRole('admin')")
+	@PreAuthorize("hasRole('admin')")
     @GetMapping("/movie-bookings")
     public List<MovieBookingReportDTO> getMovieWiseBookings() {
         List<Booking> bookings = bookingRepo.findAll();
