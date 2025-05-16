@@ -20,6 +20,5 @@ public interface MovieService {
     Movie patchMovie(Long movieId, Movie movie);
 
     boolean deleteMovie(Long movieId);
-    
-    Movie getMovieByShowId(Long showId);
+   
 }
