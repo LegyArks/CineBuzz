@@ -77,7 +77,7 @@ public class ShowtimeController {
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<Showtime> patchShowtime(@PathVariable("id") Long showId,@Valid @RequestBody Showtime showtime, BindingResult  bindingResult) {
+    public ResponseEntity<Showtime> patchShowtime(@PathVariable("id") Long showId,@RequestBody Showtime showtime, BindingResult  bindingResult) {
 		log.info("Patching showtime with ID: {}", showId);
     if (bindingResult.hasErrors()) {
 			throw new IllegalArgumentException("Validation has failed");
