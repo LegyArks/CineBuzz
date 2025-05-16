@@ -104,23 +104,6 @@ public class UserServiceImpl implements UserService {
         return true;
     }
 
-    @Override
-    public User authenticateUser(String email, String password) {
-        log.info("Authenticating user with email: {}", email);
-        User user = userRepository.findByEmail(email)
-                .orElseThrow(() -> {
-                    log.warn("User not found for email: {}", email);
-                    return new UserNotFoundException("User not found with email: " + email);
-                });
-
-        if (!user.getPassword().equals(password)) {
-            log.warn("Invalid password for user with email: {}", email);
-            throw new RuntimeException("Invalid password");
-        }
-
-        log.info("Authentication successful for user with email: {}", email);
-        return user;
-    }
 
     @Override
     public boolean emailExists(String email) {
@@ -137,4 +120,29 @@ public class UserServiceImpl implements UserService {
                     return new UserNotFoundException("User not found with email: " + email);
                 });
     }
+
+
+	@Override
+	public boolean existsByName(String username) {
+	    log.info("Checking if username exists: {}", username);
+	    return userRepository.existsByName(username);
+	}
+
+
+	@Override
+	public boolean existsByEmail(String email) {
+	    log.info("Checking if email exists: {}", email);
+	    return userRepository.existsByEmail(email);
+	}
+
+
+
+
+	@Override
+	public User findByNameOrEmail(String username, String email) {
+	    log.info("Finding user by name or email: {} or {}", username, email);
+	    return userRepository.findByNameOrEmail(username, email)
+	            .orElseThrow(() -> new UserNotFoundException("User not found with name or email: " + username + " / " + email));
+
+	}
 }
