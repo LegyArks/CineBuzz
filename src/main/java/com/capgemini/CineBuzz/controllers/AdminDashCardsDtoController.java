@@ -22,7 +22,7 @@ public class AdminDashCardsDtoController {
         this.adminDashCardsDtoService = adminDashCardsDtoService;
     }
 
-    @GetMapping("dashboard")
+    @GetMapping("/dashboard")
     public ResponseEntity<AdminDashCardsDto> getDashboardStats() {
     	AdminDashCardsDto card = adminDashCardsDtoService.getDashboardCards();
         return new ResponseEntity<>(card, HttpStatus.OK);
