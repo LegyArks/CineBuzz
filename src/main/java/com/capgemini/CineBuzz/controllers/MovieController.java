@@ -28,7 +28,6 @@ public class MovieController {
     }
 
     @GetMapping
-    
     public ResponseEntity<List<Movie>> getAllMovies() {
         log.info("Fetching all movies");
         List<Movie> movies = movieService.getAllMovies();
@@ -37,7 +36,6 @@ public class MovieController {
     }
 
     @GetMapping("/{movieId}")
-   
     public ResponseEntity<Movie> getMovie(@PathVariable Long movieId) {
         log.info("Fetching movie with ID: {}", movieId);
         Movie movie = movieService.getMovieById(movieId);
@@ -78,7 +76,9 @@ public class MovieController {
     }
 
     @PatchMapping("/{movieId}")
-    public ResponseEntity<Movie> patchMovie(@PathVariable Long movieId,@Valid @RequestBody Movie movie, BindingResult  bindingResult) {
+
+    public ResponseEntity<Movie> patchMovie(@PathVariable Long movieId, @RequestBody Movie movie, BindingResult  bindingResult) {
+
 		  log.info("Patching movie with ID: {}", movieId);
     if (bindingResult.hasErrors()) {
 			throw new IllegalArgumentException("Validation has failed");
