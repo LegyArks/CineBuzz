@@ -54,7 +54,6 @@ public class BookingController {
     }
 
     @PostMapping
-
     public ResponseEntity<Booking> createBooking(@Valid @RequestBody Booking booking , BindingResult  bindingResult) {
         log.info("Creating new booking: {}", booking);
 		if (bindingResult.hasErrors()) {
