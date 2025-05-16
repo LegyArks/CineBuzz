@@ -11,6 +11,7 @@ import com.capgemini.CineBuzz.repositories.UserRepository;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Slf4j
@@ -134,4 +135,26 @@ public class UserServiceImpl implements UserService {
                     return new UserNotFoundException("User not found with email: " + email);
                 });
     }
+
+
+	@Override
+	public boolean existsByName(String username) {
+	    log.info("Checking if username exists: {}", username);
+	    return userRepository.existsByName(username);
+	}
+
+
+	@Override
+	public boolean existsByEmail(String email) {
+	    log.info("Checking if email exists: {}", email);
+	    return userRepository.existsByEmail(email);
+	}
+
+
+	@Override
+	public User findByNameOrEmail(String username, String email) {
+	    log.info("Finding user by name or email: {} or {}", username, email);
+	    return userRepository.findByNameOrEmail(username, email)
+	            .orElseThrow(() -> new UserNotFoundException("User not found with name or email: " + username + " / " + email));
+	}
 }

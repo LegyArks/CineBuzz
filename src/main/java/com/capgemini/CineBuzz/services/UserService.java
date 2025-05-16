@@ -1,6 +1,7 @@
 package com.capgemini.CineBuzz.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.capgemini.CineBuzz.entities.User;
 
@@ -23,4 +24,10 @@ public interface UserService {
     boolean emailExists(String email);
     
     User authenticateUser(String email, String password);
+    
+	boolean existsByName(String username);
+
+	boolean existsByEmail(String email);
+
+	User findByNameOrEmail(String username, String email);
 }
