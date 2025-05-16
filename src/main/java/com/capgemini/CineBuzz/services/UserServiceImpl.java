@@ -2,15 +2,18 @@ package com.capgemini.CineBuzz.services;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
 import com.capgemini.CineBuzz.entities.User;
 import com.capgemini.CineBuzz.exceptions.UserNotFoundException;
 import com.capgemini.CineBuzz.repositories.UserRepository;
 
+
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @Slf4j

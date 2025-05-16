@@ -1,6 +1,7 @@
 package com.capgemini.CineBuzz.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.capgemini.CineBuzz.entities.User;
 
