@@ -26,7 +26,6 @@ public class ReportController {
 		this.bookingRepo = bookingRepo;
 	}
 
-	@PreAuthorize("hasRole('admin')")
     @GetMapping("/movie-bookings")
     public List<MovieBookingReportDTO> getMovieWiseBookings() {
         List<Booking> bookings = bookingRepo.findAll();
