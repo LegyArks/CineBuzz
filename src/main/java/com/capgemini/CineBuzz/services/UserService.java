@@ -23,20 +23,9 @@ public interface UserService {
 
     boolean emailExists(String email);
     
-<<<<<<< HEAD
-    User authenticateUser(String email, String password);
-    
 	boolean existsByName(String username);
 
 	boolean existsByEmail(String email);
 
-=======
-
-	boolean existsByEmail(String email);
-
-	boolean existsByName(String username);
-
-
->>>>>>> 3ce176ad05f6d62b9e9ada3aec6c006042a016c2
 	User findByNameOrEmail(String username, String email);
 }
