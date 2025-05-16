@@ -3,6 +3,7 @@ package com.capgemini.CineBuzz.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -48,6 +49,7 @@ public class MovieController {
     }
 
     @PostMapping
+    @PreAuthorize("hasRole('admin')")
     public ResponseEntity<Movie> createMovie(@Valid @RequestBody Movie movie , BindingResult  bindingResult) {
 		  log.info("Creating new movie: {}", movie.getTitle());
       if (bindingResult.hasErrors()) {
@@ -63,7 +65,7 @@ public class MovieController {
     }
 
     @PutMapping("/{movieId}")
-
+    @PreAuthorize("hasRole('admin')")
     public ResponseEntity<Movie> updateMovie(@PathVariable Long movieId,@Valid @RequestBody Movie movie ,  BindingResult  bindingResult) {
 		log.info("Updating movie with ID: {}", movieId);
     if (bindingResult.hasErrors()) {
@@ -77,6 +79,7 @@ public class MovieController {
     @PatchMapping("/{movieId}")
 
     public ResponseEntity<Movie> patchMovie(@PathVariable Long movieId, @RequestBody Movie movie, BindingResult  bindingResult) {
+
 		  log.info("Patching movie with ID: {}", movieId);
     if (bindingResult.hasErrors()) {
 			throw new IllegalArgumentException("Validation has failed");
