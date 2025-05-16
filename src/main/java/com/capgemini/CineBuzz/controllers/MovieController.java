@@ -28,7 +28,6 @@ public class MovieController {
     }
 
     @GetMapping
-    @PreAuthorize("hasRole('admin') or hasRole('user')")
     public ResponseEntity<List<Movie>> getAllMovies() {
         log.info("Fetching all movies");
         List<Movie> movies = movieService.getAllMovies();
@@ -37,7 +36,6 @@ public class MovieController {
     }
 
     @GetMapping("/{movieId}")
-    @PreAuthorize("hasRole('admin') or hasRole('user')")
     public ResponseEntity<Movie> getMovie(@PathVariable Long movieId) {
         log.info("Fetching movie with ID: {}", movieId);
         Movie movie = movieService.getMovieById(movieId);

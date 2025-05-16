@@ -641,3 +641,52 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 2025-05-16 11:17:08 INFO  - Fetching movie with ID: 29
 2025-05-16 11:17:08 INFO  - Fetching movie by Id: 29
 2025-05-16 11:17:08 INFO  - Fetched movie: Interstellar
+2025-05-16 11:58:31 INFO  - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-05-16 11:58:31 INFO  - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-16 11:58:31 INFO  - Graceful shutdown complete
+2025-05-16 11:58:31 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 11:58:31 INFO  - HikariPool-20 - Shutdown initiated...
+2025-05-16 11:58:31 INFO  - HikariPool-20 - Shutdown completed.
+2025-05-16 11:58:31 INFO  - Starting CineBuzzApplication using Java 21.0.6 with PID 24320 (C:\Users\Aditya\eclipse-workspace\CineBuzz\target\classes started by Aditya in C:\Users\Aditya\eclipse-workspace\CineBuzz)
+2025-05-16 11:58:31 DEBUG - Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-16 11:58:31 INFO  - No active profile set, falling back to 1 default profile: "default"
+2025-05-16 11:58:31 INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16 11:58:31 INFO  - Finished Spring Data repository scanning in 23 ms. Found 5 JPA repository interfaces.
+2025-05-16 11:58:31 INFO  - Tomcat initialized with port 8080 (http)
+2025-05-16 11:58:31 INFO  - Starting service [Tomcat]
+2025-05-16 11:58:31 INFO  - Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-16 11:58:31 INFO  - Initializing Spring embedded WebApplicationContext
+2025-05-16 11:58:31 INFO  - Root WebApplicationContext: initialization completed in 393 ms
+2025-05-16 11:58:31 INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16 11:58:31 INFO  - HHH000026: Second-level cache disabled
+2025-05-16 11:58:31 INFO  - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16 11:58:31 INFO  - HikariPool-21 - Starting...
+2025-05-16 11:58:32 INFO  - HikariPool-21 - Added connection com.mysql.cj.jdbc.ConnectionImpl@328566f8
+2025-05-16 11:58:32 INFO  - HikariPool-21 - Start completed.
+2025-05-16 11:58:32 WARN  - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16 11:58:32 WARN  - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-16 11:58:32 INFO  - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-21)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16 11:58:32 INFO  - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16 11:58:32 INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 11:58:32 DEBUG - Filter 'jwtAuthenticationFilter' configured for use
+2025-05-16 11:58:32 INFO  - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-05-16 11:58:32 WARN  - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-05-16 11:58:32 WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-16 11:58:32 WARN  - Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-16 11:58:32 INFO  - LiveReload server is running on port 35729
+2025-05-16 11:58:32 INFO  - Tomcat started on port 8080 (http) with context path '/'
+2025-05-16 11:58:32 INFO  - Started CineBuzzApplication in 1.113 seconds (process running for 6304.173)
+2025-05-16 11:58:32 INFO  - Condition evaluation unchanged
+2025-05-16 12:20:53 INFO  - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-16 12:20:53 INFO  - Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-16 12:20:53 INFO  - Graceful shutdown complete
+2025-05-16 12:20:53 INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16 12:20:53 INFO  - HikariPool-21 - Shutdown initiated...
+2025-05-16 12:20:53 INFO  - HikariPool-21 - Shutdown completed.
