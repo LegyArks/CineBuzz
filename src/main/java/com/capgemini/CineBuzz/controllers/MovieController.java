@@ -49,7 +49,6 @@ public class MovieController {
     }
 
     @PostMapping
-    @PreAuthorize("hasRole('admin')")
     public ResponseEntity<Movie> createMovie(@Valid @RequestBody Movie movie , BindingResult  bindingResult) {
 		  log.info("Creating new movie: {}", movie.getTitle());
       if (bindingResult.hasErrors()) {
@@ -90,7 +89,7 @@ public class MovieController {
         return ResponseEntity.ok(patchedMovie);
     }
 
-    @DeleteMapping("/{movieId}")
+    @DeleteMapping("/{movieId}")	
     public ResponseEntity<Void> deleteMovie(@PathVariable Long movieId) {
         log.info("Deleting movie with ID: {}", movieId);
         boolean deleted = movieService.deleteMovie(movieId);
@@ -102,4 +101,16 @@ public class MovieController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
+    
+    @GetMapping("/showtime/{showId}")
+    public ResponseEntity<Movie> getMovieByShowId(@PathVariable Long showId) {
+        log.info("Fetching movie by showId: {}", showId);
+        Movie movie = movieService.getMovieByShowId(showId);
+        if (movie != null) {
+            return ResponseEntity.ok(movie);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }
