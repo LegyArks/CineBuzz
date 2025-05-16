@@ -3,6 +3,7 @@ package com.capgemini.CineBuzz.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -63,7 +64,7 @@ public class MovieController {
     }
 
     @PutMapping("/{movieId}")
-
+    @PreAuthorize("hasRole('admin')")
     public ResponseEntity<Movie> updateMovie(@PathVariable Long movieId,@Valid @RequestBody Movie movie ,  BindingResult  bindingResult) {
 		log.info("Updating movie with ID: {}", movieId);
     if (bindingResult.hasErrors()) {
@@ -77,6 +78,7 @@ public class MovieController {
     @PatchMapping("/{movieId}")
 
     public ResponseEntity<Movie> patchMovie(@PathVariable Long movieId, @RequestBody Movie movie, BindingResult  bindingResult) {
+
 		  log.info("Patching movie with ID: {}", movieId);
     if (bindingResult.hasErrors()) {
 			throw new IllegalArgumentException("Validation has failed");
@@ -87,7 +89,7 @@ public class MovieController {
         return ResponseEntity.ok(patchedMovie);
     }
 
-    @DeleteMapping("/{movieId}")
+    @DeleteMapping("/{movieId}")	
     public ResponseEntity<Void> deleteMovie(@PathVariable Long movieId) {
         log.info("Deleting movie with ID: {}", movieId);
         boolean deleted = movieService.deleteMovie(movieId);
@@ -99,4 +101,16 @@ public class MovieController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
+    
+    @GetMapping("/showtime/{showId}")
+    public ResponseEntity<Movie> getMovieByShowId(@PathVariable Long showId) {
+        log.info("Fetching movie by showId: {}", showId);
+        Movie movie = movieService.getMovieByShowId(showId);
+        if (movie != null) {
+            return ResponseEntity.ok(movie);
+        } else {
+            return ResponseEntity.notFound().build();
+        }
+    }
+
 }

@@ -4,8 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.capgemini.CineBuzz.entities.Movie;
+import com.capgemini.CineBuzz.entities.Showtime;
 import com.capgemini.CineBuzz.exceptions.MovieNotFoundException;
 import com.capgemini.CineBuzz.repositories.MovieRepository;
+import com.capgemini.CineBuzz.repositories.ShowtimeRepository;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -15,11 +17,15 @@ import java.util.List;
 @Slf4j
 public class MovieServiceImpl implements MovieService {
 
+	
 	private final MovieRepository movieRepository;
+	
+	private ShowtimeRepository showtimeRepository;
 
 	@Autowired
-	public MovieServiceImpl(MovieRepository movieRepository) {
+	public MovieServiceImpl(MovieRepository movieRepository,ShowtimeRepository showtimeRepository) {
 		this.movieRepository = movieRepository;
+		this.showtimeRepository = showtimeRepository;
 	}
 
 	@Override
@@ -117,4 +123,13 @@ public class MovieServiceImpl implements MovieService {
 		log.info("Movie deleted with ID: {}", movieId);
 		return true;
 	}
+	
+	public Movie getMovieByShowId(Long showId) {
+		log.info("Get movie Using showId with ID: {}", showId);
+	    Showtime showtime = showtimeRepository.findById(showId).orElse(null);
+	    
+	    log.warn("ShowId not found with ID: {}", showId);
+	    return (showtime != null) ? showtime.getMovie() : null;
+	}
+
 }
