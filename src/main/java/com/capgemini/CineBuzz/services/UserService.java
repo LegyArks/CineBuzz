@@ -22,5 +22,11 @@ public interface UserService {
 
     boolean emailExists(String email);
     
-    User authenticateUser(String email, String password);
+
+	boolean existsByEmail(String email);
+
+	boolean existsByName(String username);
+
+
+	User findByNameOrEmail(String username, String email);
 }
