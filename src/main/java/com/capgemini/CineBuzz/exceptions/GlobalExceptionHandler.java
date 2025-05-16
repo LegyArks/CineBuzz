@@ -75,6 +75,11 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Object> handleMissingParameter(MissingParameterException ex) {
         return new ResponseEntity<>(createErrorDetails(ex.getMessage(), HttpStatus.BAD_REQUEST.value()), HttpStatus.BAD_REQUEST);
     }
+    
+    @ExceptionHandler(InvalidCredentialsException.class)
+    public ResponseEntity<Object> handleInvalidParameter(InvalidCredentialsException ex) {
+        return new ResponseEntity<>(createErrorDetails(ex.getMessage(), HttpStatus.BAD_REQUEST.value()), HttpStatus.BAD_REQUEST);
+    }
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Object> handleAllExceptions(Exception ex) {

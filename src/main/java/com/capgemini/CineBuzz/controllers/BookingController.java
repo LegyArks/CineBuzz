@@ -32,8 +32,7 @@ public class BookingController {
     public BookingController(BookingService bookingService) {
         this.bookingService = bookingService;
     }
-
-    //Just a comment for testing
+    
     @GetMapping
     public ResponseEntity<List<Booking>> getAllBookings() {
         log.info("Fetching all bookings");
