@@ -2,6 +2,7 @@ package com.capgemini.CineBuzz.services;
 
 import java.util.List;
 
+import com.capgemini.CineBuzz.dto.BookingRequestDTO;
 import com.capgemini.CineBuzz.entities.Booking;
 
 
@@ -14,4 +15,6 @@ public interface BookingService {
     boolean deleteBooking(Long id);
 
     List<Booking> findBookingsByUserName(String name);
+    Booking createBookingFromDTO(BookingRequestDTO dto);
+
 }

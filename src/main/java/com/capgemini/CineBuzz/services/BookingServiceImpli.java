@@ -5,19 +5,35 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.capgemini.CineBuzz.dto.BookingRequestDTO;
 import com.capgemini.CineBuzz.entities.Booking;
+import com.capgemini.CineBuzz.entities.Showtime;
+import com.capgemini.CineBuzz.entities.User;
 import com.capgemini.CineBuzz.exceptions.BookingNotFoundException;
+import com.capgemini.CineBuzz.exceptions.MovieNotFoundException;
+import com.capgemini.CineBuzz.exceptions.ShowtimeNotFoundException;
+import com.capgemini.CineBuzz.exceptions.UserNotFoundException;
 import com.capgemini.CineBuzz.repositories.BookingRepository;
+import com.capgemini.CineBuzz.repositories.MovieRepository;
+import com.capgemini.CineBuzz.repositories.ShowtimeRepository;
+import com.capgemini.CineBuzz.repositories.UserRepository;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Service
 @Slf4j
 public class BookingServiceImpli implements BookingService {
     private final BookingRepository bookingRepository;
+    private final UserRepository userRepository;
+    private final MovieRepository movieRepository;
+    private final ShowtimeRepository showtimeRepository;
 
     @Autowired
-    public BookingServiceImpli(BookingRepository bookingRepo) {
+    public BookingServiceImpli(BookingRepository bookingRepo ,UserRepository userRepo ,MovieRepository movieRepo , ShowtimeRepository showtimeRepo  ) {
         this.bookingRepository = bookingRepo;
+        this.userRepository = userRepo;
+        this.movieRepository = movieRepo;
+        this.showtimeRepository = showtimeRepo;
     }
 
     @Override
@@ -96,4 +112,27 @@ public class BookingServiceImpli implements BookingService {
         log.info("Fetching bookings for userName: {}", name);
         return bookingRepository.findByUser_Name(name);
     }
+    @Override
+    public Booking createBookingFromDTO(BookingRequestDTO dto) {
+    	User user = userRepository.findById(dto.getUserId())
+                .orElseThrow(() -> new UserNotFoundException("User with ID " + dto.getUserId() + " not found"));
+
+    	movieRepository.findById(dto.getMovieId())
+        .orElseThrow(() -> new MovieNotFoundException("Movie with ID " + dto.getMovieId() + " not found"));
+
+
+        Showtime showtime = showtimeRepository.findById(dto.getShowId())
+                .orElseThrow(() -> new ShowtimeNotFoundException("Showtime with ID " + dto.getShowId() + " not found"));
+
+        Booking booking = new Booking();
+        booking.setUser(user);
+        booking.setShowtime(showtime);
+        booking.setSeatsBooked(dto.getSeatsBooked());
+        booking.setBookingDate(dto.getBookingDate());
+        booking.setAmount(dto.getAmount());
+
+        return bookingRepository.save(booking);
+    }
+
+
 }
