@@ -2,59 +2,20 @@ package com.capgemini.CineBuzz.dto;
 
 public class AdminDashCardsDto {
 	
-    private String bestMovieByTickets;
-    private String bestMovieByRevenue;
-    private String worstMovieByTickets;
-    private String worstMovieByRevenue;
-    private Double totalRevenue;
-    private String mostPopularGenre;
-    private String mostPopularLanguage;
+	private Double totalRevenue;
+    private Long totalTicketsSold;
+    private String mostWatchedMovie;
+    private String leastWatchedMovie;
     
-	public AdminDashCardsDto(String bestMovieByTickets, String bestMovieByRevenue, String worstMovieByTickets, String worstMovieByRevenue, Double totalRevenue, String mostPopularGenre, String mostPopularLanguage) {
-		
-		this.bestMovieByTickets = bestMovieByTickets;
-		this.bestMovieByRevenue = bestMovieByRevenue;
-		this.worstMovieByTickets = worstMovieByTickets;
-		this.worstMovieByRevenue = worstMovieByRevenue;
+	public AdminDashCardsDto(Double totalRevenue, Long totalTicketsSold, String mostWatchedMovie, String leastWatchedMovie) {
 		this.totalRevenue = totalRevenue;
-		this.mostPopularGenre = mostPopularGenre;
-		this.mostPopularLanguage = mostPopularLanguage;
+		this.totalTicketsSold = totalTicketsSold;
+		this.mostWatchedMovie = mostWatchedMovie;
+		this.leastWatchedMovie = leastWatchedMovie;
 	}
 
 	public AdminDashCardsDto() {
 
-	}
-
-	public String getBestMovieByTickets() {
-		return bestMovieByTickets;
-	}
-
-	public void setBestMovieByTickets(String bestMovieByTickets) {
-		this.bestMovieByTickets = bestMovieByTickets;
-	}
-
-	public String getBestMovieByRevenue() {
-		return bestMovieByRevenue;
-	}
-
-	public void setBestMovieByRevenue(String bestMovieByRevenue) {
-		this.bestMovieByRevenue = bestMovieByRevenue;
-	}
-
-	public String getWorstMovieByTickets() {
-		return worstMovieByTickets;
-	}
-
-	public void setWorstMovieByTickets(String worstMovieByTickets) {
-		this.worstMovieByTickets = worstMovieByTickets;
-	}
-
-	public String getWorstMovieByRevenue() {
-		return worstMovieByRevenue;
-	}
-
-	public void setWorstMovieByRevenue(String worstMovieByRevenue) {
-		this.worstMovieByRevenue = worstMovieByRevenue;
 	}
 
 	public Double getTotalRevenue() {
@@ -65,35 +26,34 @@ public class AdminDashCardsDto {
 		this.totalRevenue = totalRevenue;
 	}
 
-	public String getMostPopularGenre() {
-		return mostPopularGenre;
+	public Long getTotalTicketsSold() {
+		return totalTicketsSold;
 	}
 
-	public void setMostPopularGenre(String mostPopularGenre) {
-		this.mostPopularGenre = mostPopularGenre;
+	public void setTotalTicketsSold(Long totalTicketsSold) {
+		this.totalTicketsSold = totalTicketsSold;
 	}
 
-	public String getMostPopularLanguage() {
-		return mostPopularLanguage;
+	public String getMostWatchedMovie() {
+		return mostWatchedMovie;
 	}
 
-	public void setMostPopularLanguage(String mostPopularLanguage) {
-		this.mostPopularLanguage = mostPopularLanguage;
+	public void setMostWatchedMovie(String mostWatchedMovie) {
+		this.mostWatchedMovie = mostWatchedMovie;
+	}
+
+	public String getLeastWatchedMovie() {
+		return leastWatchedMovie;
+	}
+
+	public void setLeastWatchedMovie(String leastWatchedMovie) {
+		this.leastWatchedMovie = leastWatchedMovie;
 	}
 
 	@Override
 	public String toString() {
-		return "AdminDashCardsDto [bestMovieByTickets=" + bestMovieByTickets + ", bestMovieByRevenue="
-				+ bestMovieByRevenue + ", worstMovieByTickets=" + worstMovieByTickets + ", worstMovieByRevenue="
-				+ worstMovieByRevenue + ", totalRevenue=" + totalRevenue + ", mostPopularGenre=" + mostPopularGenre
-				+ ", mostPopularLanguage=" + mostPopularLanguage + "]";
-	}
-	
-	
-	
-	
-    
-    
-    
+		return "AdminDashCardsDto [totalRevenue=" + totalRevenue + ", totalTicketsSold=" + totalTicketsSold
+				+ ", mostWatchedMovie=" + mostWatchedMovie + ", leastWatchedMovie=" + leastWatchedMovie + "]";
+	}   
     
 }
