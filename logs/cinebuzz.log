@@ -1127,3 +1127,95 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 2025-05-16T11:14:33.618+05:30  INFO 23496 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
 2025-05-16T11:14:33.622+05:30  INFO 23496 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Started CineBuzzApplication in 2.934 seconds (process running for 5108.271)
 2025-05-16T11:14:33.624+05:30  INFO 23496 --- [CineBuzz] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-16T11:21:04.875+05:30  INFO 23496 --- [CineBuzz] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-16T11:21:04.875+05:30  INFO 23496 --- [CineBuzz] [Thread-53] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-16T11:21:05.162+05:30  INFO 23496 --- [CineBuzz] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-16T11:21:05.167+05:30  INFO 23496 --- [CineBuzz] [Thread-53] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T11:21:05.167+05:30  INFO 23496 --- [CineBuzz] [Thread-53] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2025-05-16T11:21:05.372+05:30  INFO 23496 --- [CineBuzz] [Thread-53] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2025-05-16T11:21:05.493+05:30  INFO 23496 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Starting CineBuzzApplication using Java 17.0.12 with PID 23496 (C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes started by tanmay in C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz)
+2025-05-16T11:21:05.493+05:30 DEBUG 23496 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-16T11:21:05.493+05:30  INFO 23496 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-16T11:21:05.652+05:30  INFO 23496 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-16T11:21:05.672+05:30  INFO 23496 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 5 JPA repository interfaces.
+2025-05-16T11:21:05.751+05:30  INFO 23496 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-16T11:21:05.751+05:30  INFO 23496 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-16T11:21:05.751+05:30  INFO 23496 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-16T11:21:05.773+05:30  INFO 23496 --- [CineBuzz] [restartedMain] o.a.c.c.C.[Tomcat-2].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-05-16T11:21:05.773+05:30  INFO 23496 --- [CineBuzz] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 280 ms
+2025-05-16T11:21:05.806+05:30  INFO 23496 --- [CineBuzz] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-16T11:21:05.808+05:30  INFO 23496 --- [CineBuzz] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-16T11:21:05.815+05:30  INFO 23496 --- [CineBuzz] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-16T11:21:05.815+05:30  INFO 23496 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2025-05-16T11:21:08.227+05:30  INFO 23496 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3032cff2
+2025-05-16T11:21:08.227+05:30  INFO 23496 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2025-05-16T11:21:08.227+05:30  WARN 23496 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-16T11:21:08.227+05:30  WARN 23496 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-16T11:21:08.227+05:30  INFO 23496 --- [CineBuzz] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-15)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-16T11:21:08.361+05:30  INFO 23496 --- [CineBuzz] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-16T11:21:08.361+05:30  INFO 23496 --- [CineBuzz] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T11:21:08.440+05:30 DEBUG 23496 --- [CineBuzz] [restartedMain] c.c.C.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-16T11:21:08.454+05:30  INFO 23496 --- [CineBuzz] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-05-16T11:21:08.454+05:30  WARN 23496 --- [CineBuzz] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-05-16T11:21:08.473+05:30  WARN 23496 --- [CineBuzz] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookingController' defined in file [C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes\com\capgemini\CineBuzz\controllers\BookingController.class]: Failed to instantiate [com.capgemini.CineBuzz.controllers.BookingController]: Constructor threw exception
+2025-05-16T11:21:08.473+05:30  INFO 23496 --- [CineBuzz] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-16T11:21:08.474+05:30  INFO 23496 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2025-05-16T11:21:10.600+05:30  INFO 23496 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2025-05-16T11:21:10.600+05:30  INFO 23496 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-05-16T11:21:10.605+05:30  INFO 23496 --- [CineBuzz] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-16T11:21:10.607+05:30 ERROR 23496 --- [CineBuzz] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'bookingController' defined in file [C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes\com\capgemini\CineBuzz\controllers\BookingController.class]: Failed to instantiate [com.capgemini.CineBuzz.controllers.BookingController]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1387) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1224) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1221) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1122) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
+	at com.capgemini.CineBuzz.CineBuzzApplication.main(CineBuzzApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.4.5.jar:3.4.5]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.capgemini.CineBuzz.controllers.BookingController]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:222) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:145) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 26 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	Syntax error on tokens, delete these tokens
+
+	at com.capgemini.CineBuzz.controllers.BookingController.<init>(BookingController.java:35) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:209) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 28 common frames omitted
+
