@@ -35,4 +35,4 @@ build/
 !/src/test//build/
 
 ### VS Code ###
-.vscode/
+.vscode/"logs/" 
