@@ -11,10 +11,16 @@ import com.capgemini.CineBuzz.entities.User;
 
 
 public interface UserRepository extends JpaRepository<User, Long> {
- 
-	 Optional<User> findByEmailAndPassword(String email,String password);
-	 
+ 	 
 	 Optional<User> findByEmail(String email);
+	 
+	 Optional<User> findByNameOrEmail(String username, String email);
+
+		Optional<User> findByName(String username);
+
+		boolean existsByName(String username);
+
+		boolean existsByEmail(String email);
 }
 
 

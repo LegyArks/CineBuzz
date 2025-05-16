@@ -1,25 +1,15 @@
 package com.capgemini.CineBuzz.dto;
 
 public class LoginDto {
-
-	private String email;
+	private String username;
 	private String password;
-	
-	public LoginDto() {
-		// TODO Auto-generated constructor stub
+
+	public String getUsername() {
+		return username;
 	}
 
-	public LoginDto(String email, String password) {
-		this.email = email;
-		this.password = password;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getPassword() {
@@ -30,12 +20,4 @@ public class LoginDto {
 		this.password = password;
 	}
 
-	@Override
-	public String toString() {
-		return "LoginDto [email=" + email + ", password=" + password + "]";
-	}
-	
-	
-	
-	
 }
