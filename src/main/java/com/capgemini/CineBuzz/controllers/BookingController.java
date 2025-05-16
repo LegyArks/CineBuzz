@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.capgemini.CineBuzz.dto.BookingRequestDTO;
 import com.capgemini.CineBuzz.entities.Booking;
 import com.capgemini.CineBuzz.services.BookingService;
 
@@ -102,5 +103,25 @@ public class BookingController {
         List<Booking> bookings = bookingService.findBookingsByUserName(username);
         log.debug("Found {} bookings for user {}", bookings.size(), username);
         return ResponseEntity.ok(bookings);
+    }
+    
+    @PostMapping("/bookingRequest")
+    public ResponseEntity<Booking> simpleBooking(
+            @Valid @RequestBody BookingRequestDTO bookingRequestDTO,
+            BindingResult bindingResult) {
+
+        log.info("Creating booking via simple DTO: {}", bookingRequestDTO);
+
+        if (bindingResult.hasErrors()) {
+            throw new IllegalArgumentException("Validation failed for BookingRequestDTO");
+        }
+
+        Booking savedBooking = bookingService.createBookingFromDTO(bookingRequestDTO);
+        log.debug("Booking created from DTO with ID: {}", savedBooking.getBookingId());
+
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .location(URI.create("/api/bookings/" + savedBooking.getBookingId()))
+                .body(savedBooking);
     }
 }
