@@ -732,3 +732,292 @@ Identify and stop the process that's listening on port 8080 or configure this ap
 2025-05-17T14:15:27.640+05:30  INFO 12000 --- [CineBuzz] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
 2025-05-17T14:15:27.700+05:30  INFO 12000 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
 2025-05-17T14:15:27.726+05:30  INFO 12000 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Started CineBuzzApplication in 10.035 seconds (process running for 10.51)
+2025-05-17T14:49:18.234+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-17T14:49:18.234+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-17T14:49:18.239+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2025-05-17T14:49:18.371+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:49:18.371+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:49:18.371+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-4] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:49:18.374+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:49:22.002+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:49:23.205+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-7] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:49:23.205+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:01.275+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-8] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:04.131+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-10] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:04.133+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-9] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:08.741+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-4] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:08.741+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:08.952+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:08.952+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:11.906+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:11.906+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:22.168+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-7] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:22.170+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-8] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:28.107+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-10] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:28.107+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-9] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:29.191+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:29.193+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-4] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:30.934+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:30.934+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:33.689+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:33.689+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:38.346+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-7] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:38.346+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-8] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:39.845+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-9] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:39.845+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-10] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:41.347+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:41.352+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-4] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:45.142+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:45.145+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:54.873+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:54.875+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:56.170+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-7] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:56.170+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-8] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:57.393+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-10] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:50:59.386+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-9] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:07.818+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:07.815+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-4] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:17.919+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:17.919+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:23.705+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:23.705+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:24.816+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-7] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:24.820+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-8] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:27.095+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-10] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:27.095+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-9] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:29.531+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-4] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:29.536+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:31.075+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:31.075+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:33.323+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:33.323+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:36.111+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-7] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:36.114+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-8] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:46.099+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-10] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:46.105+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-9] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:56.614+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:51:56.614+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-4] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:06.446+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:06.450+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:15.440+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:15.442+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:17.530+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-7] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:17.530+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-8] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:20.180+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-10] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:20.180+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-9] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:23.437+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-4] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:23.437+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:25.841+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-1] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:25.843+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-2] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:29.239+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-6] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:29.239+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:29.436+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-7] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:29.436+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-8] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:38.625+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-9] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:38.625+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-10] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:47.748+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-4] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T14:52:47.751+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T15:02:18.740+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-5] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T15:02:32.801+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-8] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T15:02:33.024+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-8] c.c.CineBuzz.services.UserServiceImpl    : Checking if username exists: null
+2025-05-17T15:02:33.313+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-8] c.c.CineBuzz.services.UserServiceImpl    : Checking if email exists: samuel@gmail.com
+2025-05-17T15:02:33.598+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-8] c.c.CineBuzz.services.UserServiceImpl    : Creating new user with email: samuel@gmail.com
+2025-05-17T15:02:33.877+05:30  WARN 12000 --- [CineBuzz] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [jakarta.validation.ConstraintViolationException: Validation failed for classes [com.capgemini.CineBuzz.entities.User] during persist time for groups [jakarta.validation.groups.Default, ]<EOL>List of constraint violations:[<EOL>?ConstraintViolationImpl{interpolatedMessage='Full name is required', propertyPath=name, rootBeanClass=class com.capgemini.CineBuzz.entities.User, messageTemplate='Full name is required'}<EOL>]]
+2025-05-17T15:03:03.938+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-7] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T15:03:03.938+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-7] c.c.CineBuzz.services.UserServiceImpl    : Checking if username exists: samuel
+2025-05-17T15:03:03.962+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-7] c.c.CineBuzz.services.UserServiceImpl    : Checking if email exists: samuel@gmail.com
+2025-05-17T15:03:04.170+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-7] c.c.CineBuzz.services.UserServiceImpl    : Creating new user with email: samuel@gmail.com
+2025-05-17T15:03:27.621+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-10] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T15:04:57.028+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-3] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T15:05:40.996+05:30  INFO 12000 --- [CineBuzz] [http-nio-8080-exec-4] c.c.C.security.JwtAuthenticationFilter   : Bearer Token : null
+2025-05-17T15:06:07.845+05:30  INFO 12000 --- [CineBuzz] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-17T15:06:07.850+05:30  INFO 12000 --- [CineBuzz] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-17T15:06:08.016+05:30  INFO 13204 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Starting CineBuzzApplication using Java 17.0.12 with PID 13204 (C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes started by tanmay in C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz)
+2025-05-17T15:06:08.019+05:30 DEBUG 13204 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-17T15:06:08.022+05:30  INFO 13204 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-17T15:06:08.115+05:30  INFO 13204 --- [CineBuzz] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-17T15:06:08.116+05:30  INFO 13204 --- [CineBuzz] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-17T15:06:08.130+05:30  INFO 12000 --- [CineBuzz] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-17T15:06:08.139+05:30  INFO 12000 --- [CineBuzz] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-17T15:06:08.144+05:30  INFO 12000 --- [CineBuzz] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-17T15:06:08.237+05:30  INFO 12000 --- [CineBuzz] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-17T15:06:08.361+05:30  INFO 12000 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Starting CineBuzzApplication using Java 17.0.12 with PID 12000 (C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes started by tanmay in C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz)
+2025-05-17T15:06:08.362+05:30 DEBUG 12000 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-17T15:06:08.362+05:30  INFO 12000 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-17T15:06:08.862+05:30  INFO 12000 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-17T15:06:08.943+05:30  INFO 12000 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 72 ms. Found 5 JPA repository interfaces.
+2025-05-17T15:06:09.157+05:30  INFO 12000 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-17T15:06:09.164+05:30  INFO 12000 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-17T15:06:09.164+05:30  INFO 12000 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-17T15:06:09.199+05:30  INFO 12000 --- [CineBuzz] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-17T15:06:09.199+05:30  INFO 12000 --- [CineBuzz] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 832 ms
+2025-05-17T15:06:09.277+05:30  INFO 12000 --- [CineBuzz] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-17T15:06:09.295+05:30  INFO 12000 --- [CineBuzz] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-17T15:06:09.314+05:30  INFO 12000 --- [CineBuzz] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-17T15:06:09.316+05:30  INFO 12000 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-05-17T15:06:09.896+05:30  INFO 13204 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-17T15:06:10.016+05:30  INFO 13204 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 105 ms. Found 5 JPA repository interfaces.
+2025-05-17T15:06:10.247+05:30  INFO 12000 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@779c70d4
+2025-05-17T15:06:10.248+05:30  INFO 12000 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-05-17T15:06:10.248+05:30  WARN 12000 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-17T15:06:10.249+05:30  WARN 12000 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-17T15:06:10.249+05:30  INFO 12000 --- [CineBuzz] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-17T15:06:10.462+05:30  INFO 12000 --- [CineBuzz] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-17T15:06:10.462+05:30  INFO 12000 --- [CineBuzz] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-17T15:06:10.568+05:30 DEBUG 12000 --- [CineBuzz] [restartedMain] c.c.C.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-17T15:06:10.620+05:30  INFO 12000 --- [CineBuzz] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-05-17T15:06:10.620+05:30  WARN 12000 --- [CineBuzz] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-05-17T15:06:10.732+05:30  WARN 12000 --- [CineBuzz] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-17T15:06:11.017+05:30  WARN 12000 --- [CineBuzz] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-17T15:06:11.114+05:30  INFO 12000 --- [CineBuzz] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-17T15:06:11.161+05:30  INFO 12000 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-17T15:06:11.167+05:30  INFO 12000 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Started CineBuzzApplication in 2.86 seconds (process running for 3053.951)
+2025-05-17T15:06:11.169+05:30  INFO 12000 --- [CineBuzz] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-17T15:06:11.408+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-17T15:06:11.425+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-17T15:06:11.426+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-17T15:06:11.486+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-17T15:06:11.486+05:30  INFO 13204 --- [CineBuzz] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3369 ms
+2025-05-17T15:06:11.695+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-17T15:06:11.779+05:30  INFO 13204 --- [CineBuzz] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-17T15:06:11.836+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-17T15:06:12.291+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-17T15:06:12.338+05:30  INFO 13204 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-17T15:06:13.344+05:30  INFO 13204 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@655e330b
+2025-05-17T15:06:13.350+05:30  INFO 13204 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-17T15:06:13.454+05:30  WARN 13204 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-17T15:06:13.455+05:30  WARN 13204 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-17T15:06:13.491+05:30  INFO 13204 --- [CineBuzz] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-17T15:06:14.783+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-17T15:06:14.788+05:30  INFO 13204 --- [CineBuzz] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-17T15:06:15.334+05:30 DEBUG 13204 --- [CineBuzz] [restartedMain] c.c.C.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-17T15:06:15.388+05:30  INFO 13204 --- [CineBuzz] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-17T15:06:16.595+05:30  INFO 13204 --- [CineBuzz] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-05-17T15:06:16.596+05:30  WARN 13204 --- [CineBuzz] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-05-17T15:06:16.808+05:30  WARN 13204 --- [CineBuzz] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-17T15:06:17.545+05:30  WARN 13204 --- [CineBuzz] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-17T15:06:17.803+05:30  WARN 13204 --- [CineBuzz] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-05-17T15:06:17.844+05:30  WARN 13204 --- [CineBuzz] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2025-05-17T15:06:17.849+05:30  INFO 13204 --- [CineBuzz] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-17T15:06:17.856+05:30  INFO 13204 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-17T15:06:18.364+05:30  INFO 13204 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-17T15:06:18.405+05:30  INFO 13204 --- [CineBuzz] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-17T15:06:18.454+05:30 ERROR 13204 --- [CineBuzz] [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2025-05-17T15:06:28.945+05:30  INFO 20884 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Starting CineBuzzApplication using Java 17.0.12 with PID 20884 (C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes started by tanmay in C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz)
+2025-05-17T15:06:28.948+05:30 DEBUG 20884 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-17T15:06:28.948+05:30  INFO 20884 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-17T15:06:29.040+05:30  INFO 20884 --- [CineBuzz] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-05-17T15:06:29.040+05:30  INFO 20884 --- [CineBuzz] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-05-17T15:06:30.319+05:30  INFO 20884 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-17T15:06:30.442+05:30  INFO 20884 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 5 JPA repository interfaces.
+2025-05-17T15:06:31.486+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-17T15:06:31.506+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-17T15:06:31.508+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-17T15:06:31.567+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-17T15:06:31.568+05:30  INFO 20884 --- [CineBuzz] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2527 ms
+2025-05-17T15:06:31.806+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-17T15:06:31.897+05:30  INFO 20884 --- [CineBuzz] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-17T15:06:31.949+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-17T15:06:32.369+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-17T15:06:32.426+05:30  INFO 20884 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-17T15:06:33.611+05:30  INFO 20884 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3195a551
+2025-05-17T15:06:33.617+05:30  INFO 20884 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-17T15:06:33.692+05:30  WARN 20884 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-17T15:06:33.693+05:30  WARN 20884 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-17T15:06:33.719+05:30  INFO 20884 --- [CineBuzz] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-17T15:06:35.032+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-17T15:06:35.036+05:30  INFO 20884 --- [CineBuzz] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-17T15:06:35.561+05:30 DEBUG 20884 --- [CineBuzz] [restartedMain] c.c.C.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-17T15:06:35.632+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-17T15:06:36.720+05:30  INFO 20884 --- [CineBuzz] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-05-17T15:06:36.724+05:30  WARN 20884 --- [CineBuzz] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-05-17T15:06:36.925+05:30  WARN 20884 --- [CineBuzz] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-17T15:06:37.617+05:30  WARN 20884 --- [CineBuzz] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-17T15:06:37.876+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-17T15:06:37.936+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-17T15:06:37.968+05:30  INFO 20884 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Started CineBuzzApplication in 9.719 seconds (process running for 10.243)
+2025-05-17T15:42:25.728+05:30  INFO 20884 --- [CineBuzz] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-05-17T15:42:25.733+05:30  INFO 20884 --- [CineBuzz] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-17T15:42:25.998+05:30  INFO 20884 --- [CineBuzz] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-17T15:42:26.012+05:30  INFO 20884 --- [CineBuzz] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-17T15:42:26.016+05:30  INFO 20884 --- [CineBuzz] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-17T15:42:26.084+05:30  INFO 20884 --- [CineBuzz] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-17T15:42:26.213+05:30  INFO 20884 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Starting CineBuzzApplication using Java 17.0.12 with PID 20884 (C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz\target\classes started by tanmay in C:\Users\tanma\OneDrive\Desktop\Movies\MovidTwo\CineBuzz)
+2025-05-17T15:42:26.213+05:30 DEBUG 20884 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Running with Spring Boot v3.4.5, Spring v6.2.6
+2025-05-17T15:42:26.214+05:30  INFO 20884 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-05-17T15:42:26.548+05:30  INFO 20884 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-17T15:42:26.596+05:30  INFO 20884 --- [CineBuzz] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 5 JPA repository interfaces.
+2025-05-17T15:42:26.786+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-05-17T15:42:26.787+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-17T15:42:26.788+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-17T15:42:26.819+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-17T15:42:26.820+05:30  INFO 20884 --- [CineBuzz] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 603 ms
+2025-05-17T15:42:26.888+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-17T15:42:26.894+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-17T15:42:26.909+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-17T15:42:26.910+05:30  INFO 20884 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-05-17T15:42:29.106+05:30  INFO 20884 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17d43bf6
+2025-05-17T15:42:29.107+05:30  INFO 20884 --- [CineBuzz] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-05-17T15:42:29.109+05:30  WARN 20884 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-05-17T15:42:29.109+05:30  WARN 20884 --- [CineBuzz] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-05-17T15:42:29.110+05:30  INFO 20884 --- [CineBuzz] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-17T15:42:29.344+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-17T15:42:29.345+05:30  INFO 20884 --- [CineBuzz] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-17T15:42:29.449+05:30 DEBUG 20884 --- [CineBuzz] [restartedMain] c.c.C.security.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2025-05-17T15:42:29.508+05:30  INFO 20884 --- [CineBuzz] [restartedMain] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2025-05-17T15:42:29.509+05:30  WARN 20884 --- [CineBuzz] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2025-05-17T15:42:29.625+05:30  WARN 20884 --- [CineBuzz] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-05-17T15:42:29.827+05:30  WARN 20884 --- [CineBuzz] [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates, check your Thymeleaf configuration, or set spring.thymeleaf.check-template-location=false)
+2025-05-17T15:42:29.888+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-05-17T15:42:29.905+05:30  INFO 20884 --- [CineBuzz] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-05-17T15:42:29.911+05:30  INFO 20884 --- [CineBuzz] [restartedMain] c.c.CineBuzz.CineBuzzApplication         : Started CineBuzzApplication in 3.763 seconds (process running for 2162.185)
+2025-05-17T15:42:29.918+05:30  INFO 20884 --- [CineBuzz] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-05-17T15:42:31.373+05:30  INFO 20884 --- [CineBuzz] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-05-17T15:42:31.377+05:30  INFO 20884 --- [CineBuzz] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-17T15:42:31.952+05:30  INFO 20884 --- [CineBuzz] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-17T15:42:31.960+05:30  INFO 20884 --- [CineBuzz] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-17T15:42:31.962+05:30  INFO 20884 --- [CineBuzz] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-05-17T15:42:34.323+05:30  INFO 20884 --- [CineBuzz] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
