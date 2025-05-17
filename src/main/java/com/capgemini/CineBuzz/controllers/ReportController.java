@@ -33,7 +33,7 @@ public class ReportController {
 
         for (Booking booking : bookings) {
             if (booking.getShowtime() != null && booking.getShowtime().getMovie() != null) {
-                String movieName = booking.getShowtime().getMovie().getTitle(); // adjust getter if needed
+                String movieName = booking.getShowtime().getMovie().getTitle(); 
                 movieSeatMap.put(movieName,
                         movieSeatMap.getOrDefault(movieName, 0) + booking.getSeatsBooked());
             }
