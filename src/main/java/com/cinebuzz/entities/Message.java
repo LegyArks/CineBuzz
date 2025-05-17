@@ -36,11 +36,12 @@ public class Message {
         this.timestamp = LocalDateTime.now();
     }
 
-    public Message(Long messageId, String name, User user, String message, LocalDateTime timestamp) {
+    public Message(Long messageId, String name, User user, String message, String adminResponse, LocalDateTime timestamp) {
         this.messageId = messageId;
         this.name = name;
         this.user = user;
         this.message = message;
+        this.adminResponse = adminResponse;
         this.timestamp = timestamp;
     }
 
