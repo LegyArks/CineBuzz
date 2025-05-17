@@ -2,6 +2,7 @@ package com.capgemini.CineBuzz.entities;
 
 import java.util.List;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -37,7 +38,7 @@ public class Movie {
     
     private boolean isUpcoming;
     
-    private byte[] image;  
+    private byte[] image;
     
     @NotBlank(message = "Description is required")
     private String description;  
