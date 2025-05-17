@@ -1,0 +1,45 @@
+package com.cinebuzz.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.cinebuzz.dto.AdminDashCardsDto;
+import com.cinebuzz.dto.MovieRevenueReportDto;
+import com.cinebuzz.repositories.BookingRepository;
+
+@Service
+public class AdminDashCardsDtoServiceImpl implements AdminDashCardsDtoService {
+
+    private final BookingRepository bookingRepo;
+
+    public AdminDashCardsDtoServiceImpl(BookingRepository bookingRepo) {
+        this.bookingRepo = bookingRepo;
+    }
+
+    @Override
+    public AdminDashCardsDto getDashboardCards() {
+
+        AdminDashCardsDto card = new AdminDashCardsDto();
+
+        Double revenue = bookingRepo.getTotalRevenue();
+        card.setTotalRevenue(revenue != null ? revenue : 0.0);
+
+        Long ticketsSold = bookingRepo.getTotalTicketsSold();
+        card.setTotalTicketsSold(ticketsSold != null ? ticketsSold : 0);
+
+        List<Object[]> movieWatchCounts = bookingRepo.getMovieWatchCounts();
+        if (!movieWatchCounts.isEmpty()) {
+            card.setMostWatchedMovie((String) movieWatchCounts.get(0)[0]);
+            card.setLeastWatchedMovie((String) movieWatchCounts.get(movieWatchCounts.size() - 1)[0]);
+        } else {
+            card.setMostWatchedMovie("N/A");
+            card.setLeastWatchedMovie("N/A");
+        }
+
+        List<MovieRevenueReportDto> movieRevenueReport = bookingRepo.getMovieRevenueReport();
+        card.setMovieRevenueReport(movieRevenueReport);
+        
+        return card;
+    }
+}
