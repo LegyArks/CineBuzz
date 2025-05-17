@@ -29,8 +29,4 @@ public class MovieBookingReportDTO {
 		this.totalSeats = totalSeats;
 	}
     
-	
-	
-
-    // getters & setters
 }
