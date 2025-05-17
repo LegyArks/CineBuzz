@@ -37,7 +37,7 @@ public class Movie {
     
     private boolean isUpcoming;
     
-    private byte[] image;  
+    private String image;  
     
     @NotBlank(message = "Description is required")
     private String description;  
@@ -50,7 +50,7 @@ public class Movie {
 
     public Movie() {}
 
-    public Movie(Long movieId, String title, String genre, int duration, String language, double price, boolean isUpcoming, byte[] image, String description, String trailer) {
+    public Movie(Long movieId, String title, String genre, int duration, String language, double price, boolean isUpcoming, String image, String description, String trailer) {
         this.movieId = movieId;
         this.title = title;
         this.genre = genre;
@@ -86,8 +86,8 @@ public class Movie {
     public boolean isUpcoming() { return isUpcoming; }
     public void setUpcoming(boolean upcoming) { isUpcoming = upcoming; }
 
-    public byte[] getImage() { return image; }
-    public void setImage(byte[] image) { this.image = image; }
+    public String getImage() { return image; }
+    public void setImage(String image) { this.image = image; }
 
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
