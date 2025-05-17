@@ -26,7 +26,6 @@ public class Message {
 
     private String message;
 
-    // NEW: adminResponse field for admin's reply
     private String adminResponse;
 
     @NotNull(message = "TimeStamp is required")
@@ -85,7 +84,6 @@ public class Message {
         this.message = message;
     }
 
-    // Getter and Setter for adminResponse
     public String getAdminResponse() {
         return adminResponse;
     }
